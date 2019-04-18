@@ -10,8 +10,7 @@ namespace Finance_Management
             if (usn.Length == 10)
             {
                 Regex usnExp = new Regex("^1BM\\d{2}[A-Z]{2}\\d{3}$");
-                Match usn_result = usnExp.Match(usn);
-                if (usn_result.Success)
+                if (usnExp.Match(usn).Success)
                 {
                     return true;
                 }
@@ -105,12 +104,33 @@ namespace Finance_Management
         public bool Name(string name)
         {
             Regex nameExp = new Regex("^[a-zA-Z \\.]+$");
-            Match name_result = nameExp.Match(name);
-            if (name_result.Success)
+            if (nameExp.Match(name).Success)
             {
                 return true;
             }
             return false;
+        }
+
+        public bool EmployeeID(string id)
+        {
+            if (id.Length == 10)
+            {
+                Regex idExp = new Regex("^1BM\\d{2}[A-Z]{2}\\d{2}S$");
+                if (idExp.Match(id).Success)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool ListBox(string listItem)
+        {
+            if (listItem == "")
+            {
+                return false;
+            }
+            return true;
         }
     }
 }
