@@ -16,7 +16,7 @@ namespace Finance_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StudentInfo());
+            Application.Run(new StaffInfo());
         }
     }
 }
