@@ -132,5 +132,34 @@ namespace Finance_Management
             }
             return true;
         }
+
+        public bool ScholarshipID(string id)
+        {
+            if (id.Length > 4 && id.Length < 10)
+            {
+                Regex idExp = new Regex("^[A-Z]+_[A-Z]+$");
+                if (idExp.Match(id).Success)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool Amount(string amount)
+        {
+            try
+            {
+                if (int.Parse(amount) > 0)
+                {
+                    return true;
+                }
+            }
+            catch (FormatException)
+            {
+
+            }
+            return false;
+        }
     }
 }
