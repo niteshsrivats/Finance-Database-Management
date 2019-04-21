@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using System.Data.OleDb;
+using System.Windows.Forms;
 
 namespace Finance_Management
 {
@@ -65,14 +66,34 @@ namespace Finance_Management
             }
         }
 
-        public System.Data.DataTable Display(string sqlQuery)
+        public void Display(string sqlQuery, DataGridView dataGridView)
         {
             connection.Open();
             adapter = new OleDbDataAdapter(sqlQuery, connection);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
+            dataGridView.DataSource = dt;
             connection.Close();
-            return dt;
+        }
+
+        public bool Update(string sqlQuery)
+        {
+            connection.Open();
+            adapter = new OleDbDataAdapter("select * from student_info", connection);
+            adapter.UpdateCommand = new OleDbCommand(sqlQuery, connection);
+            try
+            {
+                adapter.UpdateCommand.ExecuteNonQuery();
+                return true;
+            }
+            catch (OleDbException)
+            {
+                return false;
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
     }
 }
