@@ -47,22 +47,94 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="forms\Hostel\HostelStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Hostel\HostelStaff.Designer.cs">
+      <DependentUpon>HostelStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Navigation\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Navigation\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Navigation\NewEntryMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Navigation\NewEntryMenu.Designer.cs">
+      <DependentUpon>NewEntryMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Navigation\StudentTransactionMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Navigation\StudentTransactionMenu.Designer.cs">
+      <DependentUpon>StudentTransactionMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Scholarship\ScholarshipTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Scholarship\ScholarshipTransaction.Designer.cs">
+      <DependentUpon>ScholarshipTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Scholarship\ScholarshipType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Scholarship\ScholarshipType.Designer.cs">
+      <DependentUpon>ScholarshipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Staff\StaffTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Staff\StaffTransaction.Designer.cs">
+      <DependentUpon>StaffTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Student\StudentTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Student\StudentTransaction.Designer.cs">
+      <DependentUpon>StudentTransaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQL_Operator.cs" />
-    <Compile Include="forms\StaffInfo.cs">
+    <Compile Include="forms\Staff\StaffInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\StaffInfo.Designer.cs">
+    <Compile Include="forms\Staff\StaffInfo.Designer.cs">
       <DependentUpon>StaffInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\StudentInfo.cs">
+    <Compile Include="forms\Student\StudentInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\StudentInfo.Designer.cs">
+    <Compile Include="forms\Student\StudentInfo.Designer.cs">
       <DependentUpon>StudentInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Validation.cs" />
+    <EmbeddedResource Include="forms\Hostel\HostelStaff.resx">
+      <DependentUpon>HostelStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Navigation\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Navigation\NewEntryMenu.resx">
+      <DependentUpon>NewEntryMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Navigation\StudentTransactionMenu.resx">
+      <DependentUpon>StudentTransactionMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Scholarship\ScholarshipTransaction.resx">
+      <DependentUpon>ScholarshipTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Scholarship\ScholarshipType.resx">
+      <DependentUpon>ScholarshipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Staff\StaffTransaction.resx">
+      <DependentUpon>StaffTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Student\StudentTransaction.resx">
+      <DependentUpon>StudentTransaction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -73,10 +145,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="forms\StaffInfo.resx">
+    <EmbeddedResource Include="forms\Staff\StaffInfo.resx">
       <DependentUpon>StaffInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\StudentInfo.resx">
+    <EmbeddedResource Include="forms\Student\StudentInfo.resx">
       <DependentUpon>StudentInfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
