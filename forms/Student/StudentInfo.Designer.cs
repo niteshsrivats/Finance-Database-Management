@@ -44,7 +44,8 @@
             // LabelName
             // 
             this.LabelName.AutoSize = true;
-            this.LabelName.Location = new System.Drawing.Point(209, 63);
+            this.LabelName.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.LabelName.Location = new System.Drawing.Point(298, 119);
             this.LabelName.Name = "LabelName";
             this.LabelName.Size = new System.Drawing.Size(45, 17);
             this.LabelName.TabIndex = 0;
@@ -54,7 +55,8 @@
             // LabelUsn
             // 
             this.LabelUsn.AutoSize = true;
-            this.LabelUsn.Location = new System.Drawing.Point(209, 123);
+            this.LabelUsn.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.LabelUsn.Location = new System.Drawing.Point(295, 182);
             this.LabelUsn.Name = "LabelUsn";
             this.LabelUsn.Size = new System.Drawing.Size(37, 17);
             this.LabelUsn.TabIndex = 1;
@@ -64,7 +66,8 @@
             // LabelDob
             // 
             this.LabelDob.AutoSize = true;
-            this.LabelDob.Location = new System.Drawing.Point(209, 181);
+            this.LabelDob.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.LabelDob.Location = new System.Drawing.Point(295, 237);
             this.LabelDob.Name = "LabelDob";
             this.LabelDob.Size = new System.Drawing.Size(122, 17);
             this.LabelDob.TabIndex = 2;
@@ -74,7 +77,8 @@
             // LabelHostel
             // 
             this.LabelHostel.AutoSize = true;
-            this.LabelHostel.Location = new System.Drawing.Point(209, 254);
+            this.LabelHostel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.LabelHostel.Location = new System.Drawing.Point(295, 305);
             this.LabelHostel.Name = "LabelHostel";
             this.LabelHostel.Size = new System.Drawing.Size(48, 17);
             this.LabelHostel.TabIndex = 4;
@@ -82,44 +86,48 @@
             // 
             // Submit
             // 
+            this.Submit.BackColor = System.Drawing.SystemColors.Window;
             this.Submit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Submit.Location = new System.Drawing.Point(342, 308);
+            this.Submit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Submit.Location = new System.Drawing.Point(406, 378);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(75, 23);
+            this.Submit.Size = new System.Drawing.Size(93, 34);
             this.Submit.TabIndex = 6;
             this.Submit.Text = "Submit";
-            this.Submit.UseVisualStyleBackColor = true;
+            this.Submit.UseVisualStyleBackColor = false;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
             // NameBox
             // 
-            this.NameBox.Location = new System.Drawing.Point(332, 60);
+            this.NameBox.BackColor = System.Drawing.SystemColors.Window;
+            this.NameBox.Location = new System.Drawing.Point(467, 119);
             this.NameBox.MaxLength = 255;
             this.NameBox.Name = "NameBox";
-            this.NameBox.Size = new System.Drawing.Size(100, 22);
+            this.NameBox.Size = new System.Drawing.Size(128, 22);
             this.NameBox.TabIndex = 1;
             // 
             // USNBox
             // 
-            this.USNBox.Location = new System.Drawing.Point(332, 120);
+            this.USNBox.BackColor = System.Drawing.SystemColors.Window;
+            this.USNBox.Location = new System.Drawing.Point(467, 177);
             this.USNBox.MaxLength = 10;
             this.USNBox.Name = "USNBox";
-            this.USNBox.Size = new System.Drawing.Size(100, 22);
+            this.USNBox.Size = new System.Drawing.Size(128, 22);
             this.USNBox.TabIndex = 2;
             // 
             // DOBBox
             // 
-            this.DOBBox.Location = new System.Drawing.Point(332, 176);
+            this.DOBBox.Location = new System.Drawing.Point(467, 237);
             this.DOBBox.MaxLength = 10;
             this.DOBBox.Name = "DOBBox";
-            this.DOBBox.Size = new System.Drawing.Size(100, 22);
+            this.DOBBox.Size = new System.Drawing.Size(128, 22);
             this.DOBBox.TabIndex = 3;
             // 
             // YesButton
             // 
             this.YesButton.AutoSize = true;
             this.YesButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.YesButton.Location = new System.Drawing.Point(332, 254);
+            this.YesButton.Location = new System.Drawing.Point(467, 301);
             this.YesButton.Name = "YesButton";
             this.YesButton.Size = new System.Drawing.Size(53, 21);
             this.YesButton.TabIndex = 4;
@@ -131,7 +139,7 @@
             this.NoButton.AutoSize = true;
             this.NoButton.Checked = true;
             this.NoButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.NoButton.Location = new System.Drawing.Point(391, 254);
+            this.NoButton.Location = new System.Drawing.Point(548, 301);
             this.NoButton.Name = "NoButton";
             this.NoButton.Size = new System.Drawing.Size(47, 21);
             this.NoButton.TabIndex = 5;
@@ -141,19 +149,23 @@
             // 
             // Back
             // 
+            this.Back.BackColor = System.Drawing.SystemColors.Window;
             this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Back.Location = new System.Drawing.Point(53, 27);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.Size = new System.Drawing.Size(93, 34);
             this.Back.TabIndex = 7;
             this.Back.Text = "Back";
-            this.Back.UseVisualStyleBackColor = true;
+            this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // StudentInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(882, 459);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.NoButton);

@@ -44,18 +44,18 @@
             // 
             // WardenBox
             // 
-            this.WardenBox.Location = new System.Drawing.Point(150, 67);
+            this.WardenBox.Location = new System.Drawing.Point(161, 86);
             this.WardenBox.MaxLength = 10;
             this.WardenBox.Name = "WardenBox";
-            this.WardenBox.Size = new System.Drawing.Size(100, 22);
+            this.WardenBox.Size = new System.Drawing.Size(121, 22);
             this.WardenBox.TabIndex = 0;
             // 
             // SupervisorBox
             // 
-            this.SupervisorBox.Location = new System.Drawing.Point(161, 141);
+            this.SupervisorBox.Location = new System.Drawing.Point(161, 176);
             this.SupervisorBox.MaxLength = 10;
             this.SupervisorBox.Name = "SupervisorBox";
-            this.SupervisorBox.Size = new System.Drawing.Size(100, 22);
+            this.SupervisorBox.Size = new System.Drawing.Size(121, 22);
             this.SupervisorBox.TabIndex = 1;
             // 
             // BlockList
@@ -74,7 +74,7 @@
             "NGH2(G)",
             "NGH5(G)",
             "NH3(B)"});
-            this.BlockList.Location = new System.Drawing.Point(150, 262);
+            this.BlockList.Location = new System.Drawing.Point(161, 262);
             this.BlockList.Name = "BlockList";
             this.BlockList.Size = new System.Drawing.Size(121, 36);
             this.BlockList.Sorted = true;
@@ -82,28 +82,31 @@
             // 
             // Submit
             // 
+            this.Submit.BackColor = System.Drawing.SystemColors.Window;
             this.Submit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Submit.Location = new System.Drawing.Point(150, 391);
+            this.Submit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Submit.Location = new System.Drawing.Point(383, 392);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(75, 23);
+            this.Submit.Size = new System.Drawing.Size(93, 34);
             this.Submit.TabIndex = 3;
             this.Submit.Text = "Submit";
-            this.Submit.UseVisualStyleBackColor = true;
+            this.Submit.UseVisualStyleBackColor = false;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
             // DataView
             // 
+            this.DataView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.DataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataView.Location = new System.Drawing.Point(372, 67);
             this.DataView.Name = "DataView";
             this.DataView.RowTemplate.Height = 24;
-            this.DataView.Size = new System.Drawing.Size(480, 195);
+            this.DataView.Size = new System.Drawing.Size(480, 210);
             this.DataView.TabIndex = 5;
             // 
             // LabelWardenID
             // 
             this.LabelWardenID.AutoSize = true;
-            this.LabelWardenID.Location = new System.Drawing.Point(49, 71);
+            this.LabelWardenID.Location = new System.Drawing.Point(52, 86);
             this.LabelWardenID.Name = "LabelWardenID";
             this.LabelWardenID.Size = new System.Drawing.Size(75, 17);
             this.LabelWardenID.TabIndex = 6;
@@ -113,7 +116,7 @@
             // LabelSupervisorID
             // 
             this.LabelSupervisorID.AutoSize = true;
-            this.LabelSupervisorID.Location = new System.Drawing.Point(52, 145);
+            this.LabelSupervisorID.Location = new System.Drawing.Point(52, 176);
             this.LabelSupervisorID.Name = "LabelSupervisorID";
             this.LabelSupervisorID.Size = new System.Drawing.Size(93, 17);
             this.LabelSupervisorID.TabIndex = 7;
@@ -123,7 +126,7 @@
             // LabelBlockName
             // 
             this.LabelBlockName.AutoSize = true;
-            this.LabelBlockName.Location = new System.Drawing.Point(52, 262);
+            this.LabelBlockName.Location = new System.Drawing.Point(52, 272);
             this.LabelBlockName.Name = "LabelBlockName";
             this.LabelBlockName.Size = new System.Drawing.Size(83, 17);
             this.LabelBlockName.TabIndex = 8;
@@ -132,7 +135,7 @@
             // LabelSearch
             // 
             this.LabelSearch.AutoSize = true;
-            this.LabelSearch.Location = new System.Drawing.Point(438, 288);
+            this.LabelSearch.Location = new System.Drawing.Point(444, 329);
             this.LabelSearch.Name = "LabelSearch";
             this.LabelSearch.Size = new System.Drawing.Size(53, 17);
             this.LabelSearch.TabIndex = 9;
@@ -141,28 +144,31 @@
             // 
             // SearchBox
             // 
-            this.SearchBox.Location = new System.Drawing.Point(557, 288);
+            this.SearchBox.Location = new System.Drawing.Point(589, 326);
             this.SearchBox.MaxLength = 255;
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(100, 22);
+            this.SearchBox.Size = new System.Drawing.Size(121, 22);
             this.SearchBox.TabIndex = 4;
             this.SearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchBox_KeyDown);
             // 
             // Back
             // 
+            this.Back.BackColor = System.Drawing.SystemColors.Window;
             this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Back.Location = new System.Drawing.Point(13, 13);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.Size = new System.Drawing.Size(93, 34);
             this.Back.TabIndex = 6;
             this.Back.Text = "Back";
-            this.Back.UseVisualStyleBackColor = true;
+            this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // HostelStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(882, 459);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.SearchBox);

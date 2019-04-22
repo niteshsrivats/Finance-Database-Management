@@ -36,52 +36,61 @@
             // 
             // Student
             // 
+            this.Student.BackColor = System.Drawing.SystemColors.Window;
             this.Student.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Student.Location = new System.Drawing.Point(446, 90);
+            this.Student.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Student.Location = new System.Drawing.Point(297, 121);
             this.Student.Name = "Student";
-            this.Student.Size = new System.Drawing.Size(75, 23);
+            this.Student.Size = new System.Drawing.Size(363, 32);
             this.Student.TabIndex = 0;
             this.Student.Text = "Student";
-            this.Student.UseVisualStyleBackColor = true;
+            this.Student.UseVisualStyleBackColor = false;
             this.Student.Click += new System.EventHandler(this.Student_Click);
             // 
             // Staff
             // 
+            this.Staff.BackColor = System.Drawing.SystemColors.Window;
             this.Staff.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Staff.Location = new System.Drawing.Point(446, 185);
+            this.Staff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Staff.Location = new System.Drawing.Point(297, 196);
             this.Staff.Name = "Staff";
-            this.Staff.Size = new System.Drawing.Size(75, 23);
+            this.Staff.Size = new System.Drawing.Size(363, 32);
             this.Staff.TabIndex = 1;
             this.Staff.Text = "Staff";
-            this.Staff.UseVisualStyleBackColor = true;
+            this.Staff.UseVisualStyleBackColor = false;
             this.Staff.Click += new System.EventHandler(this.Staff_Click);
             // 
             // Hostel
             // 
+            this.Hostel.BackColor = System.Drawing.SystemColors.Window;
             this.Hostel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Hostel.Location = new System.Drawing.Point(459, 275);
+            this.Hostel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Hostel.Location = new System.Drawing.Point(297, 261);
             this.Hostel.Name = "Hostel";
-            this.Hostel.Size = new System.Drawing.Size(75, 23);
+            this.Hostel.Size = new System.Drawing.Size(363, 32);
             this.Hostel.TabIndex = 2;
             this.Hostel.Text = "Hostel";
-            this.Hostel.UseVisualStyleBackColor = true;
+            this.Hostel.UseVisualStyleBackColor = false;
             this.Hostel.Click += new System.EventHandler(this.Hostel_Click);
             // 
             // Back
             // 
+            this.Back.BackColor = System.Drawing.SystemColors.Window;
             this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Back.Location = new System.Drawing.Point(44, 13);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.Size = new System.Drawing.Size(93, 34);
             this.Back.TabIndex = 3;
             this.Back.Text = "Back";
-            this.Back.UseVisualStyleBackColor = true;
+            this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // NewEntryMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(882, 459);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.Hostel);

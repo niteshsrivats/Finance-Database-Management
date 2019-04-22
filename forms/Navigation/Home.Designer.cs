@@ -35,35 +35,41 @@
             // 
             // Student
             // 
+            this.Student.BackColor = System.Drawing.SystemColors.Window;
             this.Student.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Student.Location = new System.Drawing.Point(309, 221);
+            this.Student.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Student.Location = new System.Drawing.Point(283, 210);
             this.Student.Name = "Student";
-            this.Student.Size = new System.Drawing.Size(363, 23);
+            this.Student.Size = new System.Drawing.Size(363, 33);
             this.Student.TabIndex = 1;
             this.Student.Text = "Student Transaction";
-            this.Student.UseVisualStyleBackColor = true;
+            this.Student.UseVisualStyleBackColor = false;
             this.Student.Click += new System.EventHandler(this.Student_Click);
             // 
             // Staff
             // 
+            this.Staff.BackColor = System.Drawing.SystemColors.Window;
             this.Staff.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Staff.Location = new System.Drawing.Point(309, 157);
+            this.Staff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Staff.Location = new System.Drawing.Point(283, 127);
             this.Staff.Name = "Staff";
-            this.Staff.Size = new System.Drawing.Size(343, 23);
+            this.Staff.Size = new System.Drawing.Size(363, 32);
             this.Staff.TabIndex = 0;
             this.Staff.Text = "Staff Transaction";
-            this.Staff.UseVisualStyleBackColor = true;
+            this.Staff.UseVisualStyleBackColor = false;
             this.Staff.Click += new System.EventHandler(this.Staff_Click);
             // 
             // Add
             // 
+            this.Add.BackColor = System.Drawing.SystemColors.Window;
             this.Add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Add.Location = new System.Drawing.Point(345, 311);
+            this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Add.Location = new System.Drawing.Point(306, 293);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(240, 23);
+            this.Add.Size = new System.Drawing.Size(318, 31);
             this.Add.TabIndex = 2;
             this.Add.Text = "Add New Entry";
-            this.Add.UseVisualStyleBackColor = true;
+            this.Add.UseVisualStyleBackColor = false;
             this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
             // Home
@@ -71,6 +77,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(882, 459);
             this.Controls.Add(this.Add);
             this.Controls.Add(this.Staff);

@@ -41,13 +41,14 @@
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.Back = new System.Windows.Forms.Button();
             this.LabelCategory = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DataView)).BeginInit();
             this.SuspendLayout();
             // 
             // LabelEmployeeID
             // 
             this.LabelEmployeeID.AutoSize = true;
-            this.LabelEmployeeID.Location = new System.Drawing.Point(31, 39);
+            this.LabelEmployeeID.Location = new System.Drawing.Point(34, 119);
             this.LabelEmployeeID.Name = "LabelEmployeeID";
             this.LabelEmployeeID.Size = new System.Drawing.Size(87, 17);
             this.LabelEmployeeID.TabIndex = 0;
@@ -57,7 +58,7 @@
             // LabelAmount
             // 
             this.LabelAmount.AutoSize = true;
-            this.LabelAmount.Location = new System.Drawing.Point(34, 107);
+            this.LabelAmount.Location = new System.Drawing.Point(34, 176);
             this.LabelAmount.Name = "LabelAmount";
             this.LabelAmount.Size = new System.Drawing.Size(56, 17);
             this.LabelAmount.TabIndex = 1;
@@ -66,18 +67,18 @@
             // 
             // AmountBox
             // 
-            this.AmountBox.Location = new System.Drawing.Point(161, 107);
+            this.AmountBox.Location = new System.Drawing.Point(161, 171);
             this.AmountBox.MaxLength = 9;
             this.AmountBox.Name = "AmountBox";
-            this.AmountBox.Size = new System.Drawing.Size(100, 22);
+            this.AmountBox.Size = new System.Drawing.Size(120, 22);
             this.AmountBox.TabIndex = 2;
             // 
             // EmployeeIDBox
             // 
-            this.EmployeeIDBox.Location = new System.Drawing.Point(161, 39);
+            this.EmployeeIDBox.Location = new System.Drawing.Point(161, 116);
             this.EmployeeIDBox.MaxLength = 10;
             this.EmployeeIDBox.Name = "EmployeeIDBox";
-            this.EmployeeIDBox.Size = new System.Drawing.Size(100, 22);
+            this.EmployeeIDBox.Size = new System.Drawing.Size(120, 22);
             this.EmployeeIDBox.TabIndex = 1;
             // 
             // Credit
@@ -85,7 +86,7 @@
             this.Credit.AutoSize = true;
             this.Credit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Credit.Enabled = false;
-            this.Credit.Location = new System.Drawing.Point(133, 177);
+            this.Credit.Location = new System.Drawing.Point(161, 223);
             this.Credit.Name = "Credit";
             this.Credit.Size = new System.Drawing.Size(66, 21);
             this.Credit.TabIndex = 3;
@@ -97,7 +98,7 @@
             this.Debit.AutoSize = true;
             this.Debit.Checked = true;
             this.Debit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Debit.Location = new System.Drawing.Point(259, 177);
+            this.Debit.Location = new System.Drawing.Point(233, 223);
             this.Debit.Name = "Debit";
             this.Debit.Size = new System.Drawing.Size(62, 21);
             this.Debit.TabIndex = 4;
@@ -114,7 +115,7 @@
             "Incentives",
             "Miscellaneous",
             "Salary"});
-            this.CategoryList.Location = new System.Drawing.Point(161, 248);
+            this.CategoryList.Location = new System.Drawing.Point(161, 292);
             this.CategoryList.Name = "CategoryList";
             this.CategoryList.Size = new System.Drawing.Size(120, 52);
             this.CategoryList.Sorted = true;
@@ -123,30 +124,32 @@
             // 
             // Submit
             // 
+            this.Submit.BackColor = System.Drawing.SystemColors.Window;
             this.Submit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Submit.Location = new System.Drawing.Point(175, 388);
+            this.Submit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Submit.Location = new System.Drawing.Point(356, 392);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(75, 23);
+            this.Submit.Size = new System.Drawing.Size(93, 34);
             this.Submit.TabIndex = 6;
             this.Submit.Text = "Submit";
-            this.Submit.UseVisualStyleBackColor = true;
+            this.Submit.UseVisualStyleBackColor = false;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
             // DataView
             // 
             this.DataView.AllowUserToOrderColumns = true;
-            this.DataView.BackgroundColor = System.Drawing.SystemColors.ControlDark;
+            this.DataView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.DataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataView.Location = new System.Drawing.Point(351, 21);
+            this.DataView.Location = new System.Drawing.Point(380, 57);
             this.DataView.Name = "DataView";
             this.DataView.RowTemplate.Height = 24;
-            this.DataView.Size = new System.Drawing.Size(480, 176);
+            this.DataView.Size = new System.Drawing.Size(480, 210);
             this.DataView.TabIndex = 8;
             // 
             // LabelSearch
             // 
             this.LabelSearch.AutoSize = true;
-            this.LabelSearch.Location = new System.Drawing.Point(454, 248);
+            this.LabelSearch.Location = new System.Drawing.Point(464, 350);
             this.LabelSearch.Name = "LabelSearch";
             this.LabelSearch.Size = new System.Drawing.Size(53, 17);
             this.LabelSearch.TabIndex = 10;
@@ -155,38 +158,51 @@
             // 
             // SearchBox
             // 
-            this.SearchBox.Location = new System.Drawing.Point(541, 248);
+            this.SearchBox.Location = new System.Drawing.Point(587, 350);
             this.SearchBox.MaxLength = 255;
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(100, 22);
+            this.SearchBox.Size = new System.Drawing.Size(126, 22);
             this.SearchBox.TabIndex = 7;
             this.SearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchBox_KeyDown);
             // 
             // Back
             // 
+            this.Back.BackColor = System.Drawing.SystemColors.Window;
             this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Back.Location = new System.Drawing.Point(37, 12);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.Size = new System.Drawing.Size(93, 34);
             this.Back.TabIndex = 9;
             this.Back.Text = "Back";
-            this.Back.UseVisualStyleBackColor = true;
+            this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // LabelCategory
             // 
             this.LabelCategory.AutoSize = true;
-            this.LabelCategory.Location = new System.Drawing.Point(42, 278);
+            this.LabelCategory.Location = new System.Drawing.Point(34, 307);
             this.LabelCategory.Name = "LabelCategory";
             this.LabelCategory.Size = new System.Drawing.Size(65, 17);
             this.LabelCategory.TabIndex = 13;
             this.LabelCategory.Text = "Category";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(37, 223);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 17);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Payment mode";
+            // 
             // StaffTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(882, 459);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.LabelCategory);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.SearchBox);
@@ -225,5 +241,6 @@
         private System.Windows.Forms.Label LabelAmount;
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Label LabelCategory;
+        private System.Windows.Forms.Label label1;
     }
 }

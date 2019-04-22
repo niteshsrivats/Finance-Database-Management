@@ -44,19 +44,21 @@
             // 
             // Submit
             // 
+            this.Submit.BackColor = System.Drawing.SystemColors.Window;
             this.Submit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Submit.Location = new System.Drawing.Point(165, 360);
+            this.Submit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Submit.Location = new System.Drawing.Point(400, 398);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(75, 23);
+            this.Submit.Size = new System.Drawing.Size(93, 34);
             this.Submit.TabIndex = 4;
             this.Submit.Text = "Submit";
-            this.Submit.UseVisualStyleBackColor = true;
+            this.Submit.UseVisualStyleBackColor = false;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
             // LabelScholarshipName
             // 
             this.LabelScholarshipName.AutoSize = true;
-            this.LabelScholarshipName.Location = new System.Drawing.Point(27, 204);
+            this.LabelScholarshipName.Location = new System.Drawing.Point(10, 315);
             this.LabelScholarshipName.Name = "LabelScholarshipName";
             this.LabelScholarshipName.Size = new System.Drawing.Size(123, 17);
             this.LabelScholarshipName.TabIndex = 2;
@@ -65,7 +67,7 @@
             // LabelUSN
             // 
             this.LabelUSN.AutoSize = true;
-            this.LabelUSN.Location = new System.Drawing.Point(30, 64);
+            this.LabelUSN.Location = new System.Drawing.Point(30, 109);
             this.LabelUSN.Name = "LabelUSN";
             this.LabelUSN.Size = new System.Drawing.Size(37, 17);
             this.LabelUSN.TabIndex = 3;
@@ -74,35 +76,36 @@
             // 
             // USNBox
             // 
-            this.USNBox.Location = new System.Drawing.Point(147, 58);
+            this.USNBox.Location = new System.Drawing.Point(149, 106);
             this.USNBox.MaxLength = 10;
             this.USNBox.Name = "USNBox";
-            this.USNBox.Size = new System.Drawing.Size(100, 22);
+            this.USNBox.Size = new System.Drawing.Size(125, 22);
             this.USNBox.TabIndex = 1;
             // 
             // DataView
             // 
             this.DataView.AllowUserToOrderColumns = true;
+            this.DataView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.DataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataView.Location = new System.Drawing.Point(353, 12);
+            this.DataView.Location = new System.Drawing.Point(379, 36);
             this.DataView.Name = "DataView";
             this.DataView.RowTemplate.Height = 24;
-            this.DataView.Size = new System.Drawing.Size(480, 192);
+            this.DataView.Size = new System.Drawing.Size(480, 210);
             this.DataView.TabIndex = 6;
             // 
             // SearchBox
             // 
-            this.SearchBox.Location = new System.Drawing.Point(523, 251);
+            this.SearchBox.Location = new System.Drawing.Point(657, 315);
             this.SearchBox.MaxLength = 255;
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(100, 22);
+            this.SearchBox.Size = new System.Drawing.Size(125, 22);
             this.SearchBox.TabIndex = 5;
             this.SearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchBox_KeyDown);
             // 
             // LabelSearch
             // 
             this.LabelSearch.AutoSize = true;
-            this.LabelSearch.Location = new System.Drawing.Point(380, 255);
+            this.LabelSearch.Location = new System.Drawing.Point(538, 320);
             this.LabelSearch.Name = "LabelSearch";
             this.LabelSearch.Size = new System.Drawing.Size(53, 17);
             this.LabelSearch.TabIndex = 7;
@@ -125,7 +128,7 @@
             "NCC Scholarship For Undergraduates",
             "SC/ST Undergraduates Scholarship",
             "Sri Visveswaraya Scholarship"});
-            this.ScholarshipNameList.Location = new System.Drawing.Point(69, 224);
+            this.ScholarshipNameList.Location = new System.Drawing.Point(149, 274);
             this.ScholarshipNameList.Name = "ScholarshipNameList";
             this.ScholarshipNameList.Size = new System.Drawing.Size(266, 100);
             this.ScholarshipNameList.Sorted = true;
@@ -134,7 +137,7 @@
             // LabelAmount
             // 
             this.LabelAmount.AutoSize = true;
-            this.LabelAmount.Location = new System.Drawing.Point(30, 114);
+            this.LabelAmount.Location = new System.Drawing.Point(30, 188);
             this.LabelAmount.Name = "LabelAmount";
             this.LabelAmount.Size = new System.Drawing.Size(56, 17);
             this.LabelAmount.TabIndex = 9;
@@ -143,27 +146,30 @@
             // 
             // AmountBox
             // 
-            this.AmountBox.Location = new System.Drawing.Point(147, 108);
+            this.AmountBox.Location = new System.Drawing.Point(149, 185);
             this.AmountBox.MaxLength = 9;
             this.AmountBox.Name = "AmountBox";
-            this.AmountBox.Size = new System.Drawing.Size(100, 22);
+            this.AmountBox.Size = new System.Drawing.Size(125, 22);
             this.AmountBox.TabIndex = 2;
             // 
             // Back
             // 
+            this.Back.BackColor = System.Drawing.SystemColors.Window;
             this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Back.Location = new System.Drawing.Point(13, 12);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.Size = new System.Drawing.Size(93, 34);
             this.Back.TabIndex = 7;
             this.Back.Text = "Back";
-            this.Back.UseVisualStyleBackColor = true;
+            this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // ScholarshipTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(882, 459);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.AmountBox);

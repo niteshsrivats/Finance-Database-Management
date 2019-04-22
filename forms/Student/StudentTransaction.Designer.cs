@@ -41,21 +41,22 @@
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.Submit = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DataView)).BeginInit();
             this.SuspendLayout();
             // 
             // USNBox
             // 
-            this.USNBox.Location = new System.Drawing.Point(150, 41);
+            this.USNBox.Location = new System.Drawing.Point(150, 104);
             this.USNBox.MaxLength = 10;
             this.USNBox.Name = "USNBox";
-            this.USNBox.Size = new System.Drawing.Size(100, 22);
+            this.USNBox.Size = new System.Drawing.Size(145, 22);
             this.USNBox.TabIndex = 1;
             // 
             // LabelUSN
             // 
             this.LabelUSN.AutoSize = true;
-            this.LabelUSN.Location = new System.Drawing.Point(48, 45);
+            this.LabelUSN.Location = new System.Drawing.Point(39, 104);
             this.LabelUSN.Name = "LabelUSN";
             this.LabelUSN.Size = new System.Drawing.Size(37, 17);
             this.LabelUSN.TabIndex = 1;
@@ -77,7 +78,7 @@
             "Hostel: Fees",
             "Hostel: Miscellaneous",
             "Hostel: Security Deposit"});
-            this.CategoryList.Location = new System.Drawing.Point(97, 217);
+            this.CategoryList.Location = new System.Drawing.Point(130, 275);
             this.CategoryList.Name = "CategoryList";
             this.CategoryList.Size = new System.Drawing.Size(202, 84);
             this.CategoryList.Sorted = true;
@@ -87,7 +88,7 @@
             // LabelCategory
             // 
             this.LabelCategory.AutoSize = true;
-            this.LabelCategory.Location = new System.Drawing.Point(12, 229);
+            this.LabelCategory.Location = new System.Drawing.Point(39, 303);
             this.LabelCategory.Name = "LabelCategory";
             this.LabelCategory.Size = new System.Drawing.Size(65, 17);
             this.LabelCategory.TabIndex = 3;
@@ -96,7 +97,7 @@
             // LabelAmount
             // 
             this.LabelAmount.AutoSize = true;
-            this.LabelAmount.Location = new System.Drawing.Point(48, 109);
+            this.LabelAmount.Location = new System.Drawing.Point(39, 166);
             this.LabelAmount.Name = "LabelAmount";
             this.LabelAmount.Size = new System.Drawing.Size(56, 17);
             this.LabelAmount.TabIndex = 4;
@@ -105,10 +106,10 @@
             // 
             // AmountBox
             // 
-            this.AmountBox.Location = new System.Drawing.Point(150, 104);
+            this.AmountBox.Location = new System.Drawing.Point(150, 161);
             this.AmountBox.MaxLength = 9;
             this.AmountBox.Name = "AmountBox";
-            this.AmountBox.Size = new System.Drawing.Size(100, 22);
+            this.AmountBox.Size = new System.Drawing.Size(145, 22);
             this.AmountBox.TabIndex = 2;
             // 
             // Credit
@@ -116,7 +117,7 @@
             this.Credit.AutoSize = true;
             this.Credit.Checked = true;
             this.Credit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Credit.Location = new System.Drawing.Point(150, 163);
+            this.Credit.Location = new System.Drawing.Point(150, 217);
             this.Credit.Name = "Credit";
             this.Credit.Size = new System.Drawing.Size(66, 21);
             this.Credit.TabIndex = 3;
@@ -129,7 +130,7 @@
             this.Debit.AutoSize = true;
             this.Debit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Debit.Enabled = false;
-            this.Debit.Location = new System.Drawing.Point(222, 163);
+            this.Debit.Location = new System.Drawing.Point(233, 217);
             this.Debit.Name = "Debit";
             this.Debit.Size = new System.Drawing.Size(62, 21);
             this.Debit.TabIndex = 4;
@@ -138,17 +139,18 @@
             // 
             // DataView
             // 
+            this.DataView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.DataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataView.Location = new System.Drawing.Point(369, 6);
+            this.DataView.Location = new System.Drawing.Point(385, 64);
             this.DataView.Name = "DataView";
             this.DataView.RowTemplate.Height = 24;
-            this.DataView.Size = new System.Drawing.Size(480, 192);
+            this.DataView.Size = new System.Drawing.Size(480, 224);
             this.DataView.TabIndex = 8;
             // 
             // LabelSearch
             // 
             this.LabelSearch.AutoSize = true;
-            this.LabelSearch.Location = new System.Drawing.Point(459, 229);
+            this.LabelSearch.Location = new System.Drawing.Point(495, 324);
             this.LabelSearch.Name = "LabelSearch";
             this.LabelSearch.Size = new System.Drawing.Size(53, 17);
             this.LabelSearch.TabIndex = 9;
@@ -157,39 +159,55 @@
             // 
             // SearchBox
             // 
-            this.SearchBox.Location = new System.Drawing.Point(587, 226);
+            this.SearchBox.Location = new System.Drawing.Point(604, 324);
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(100, 22);
+            this.SearchBox.Size = new System.Drawing.Size(123, 22);
             this.SearchBox.TabIndex = 7;
             this.SearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchBox_KeyDown);
             // 
             // Submit
             // 
+            this.Submit.BackColor = System.Drawing.SystemColors.Window;
             this.Submit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Submit.Location = new System.Drawing.Point(150, 403);
+            this.Submit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Submit.Location = new System.Drawing.Point(385, 398);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(75, 23);
+            this.Submit.Size = new System.Drawing.Size(93, 34);
             this.Submit.TabIndex = 6;
             this.Submit.Text = "Submit";
-            this.Submit.UseVisualStyleBackColor = true;
+            this.Submit.UseVisualStyleBackColor = false;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
             // Back
             // 
+            this.Back.BackColor = System.Drawing.SystemColors.Window;
             this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Back.Location = new System.Drawing.Point(13, 13);
+            this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Back.Location = new System.Drawing.Point(42, 12);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.Size = new System.Drawing.Size(93, 34);
             this.Back.TabIndex = 9;
             this.Back.Text = "Back";
-            this.Back.UseVisualStyleBackColor = true;
+            this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(33, 221);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 17);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Payment mode";
             // 
             // StudentTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(882, 459);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.Submit);
             this.Controls.Add(this.SearchBox);
@@ -228,5 +246,6 @@
         private System.Windows.Forms.TextBox SearchBox;
         private System.Windows.Forms.Button Submit;
         private System.Windows.Forms.Button Back;
+        private System.Windows.Forms.Label label1;
     }
 }
