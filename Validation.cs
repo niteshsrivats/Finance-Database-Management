@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace Finance_Management
 {
@@ -27,6 +28,45 @@ namespace Finance_Management
             return false;
         }
 
+        public int Maximum_Days_Month(int month, int year)
+        {
+            switch (month)
+            {
+                case 1:
+                    return 31;
+                case 2:
+                    if (Leap_Year_Check(year))
+                    {
+                        return 29;
+                    }
+                    else
+                    {
+                        return 28;
+                    }
+                case 3:
+                    return 31;
+                case 4:
+                    return 30;
+                case 5:
+                    return 31;
+                case 6:
+                    return 30;
+                case 7:
+                    return 31;
+                case 8:
+                    return 31;
+                case 9:
+                    return 30;
+                case 10:
+                    return 31;
+                case 11:
+                    return 30;
+                case 12:
+                    return 31;
+            }
+            return 0;
+        }
+
         public bool DOB(string dob)
         {
             DateTime today = DateTime.Today;
@@ -46,52 +86,7 @@ namespace Finance_Management
                 int max_days = 0;
                 if (1920 < year && year < (today.Year - 16) && day > 0)
                 {
-                    switch (month)
-                    {
-                        case 1:
-                            max_days = 31;
-                            break;
-                        case 2:
-                            if (Leap_Year_Check(today.Year))
-                            {
-                                max_days = 29;
-                            }
-                            else
-                            {
-                                max_days = 28;
-                            }
-                            break;
-                        case 3:
-                            max_days = 31;
-                            break;
-                        case 4:
-                            max_days = 30;
-                            break;
-                        case 5:
-                            max_days = 31;
-                            break;
-                        case 6:
-                            max_days = 30;
-                            break;
-                        case 7:
-                            max_days = 31;
-                            break;
-                        case 8:
-                            max_days = 31;
-                            break;
-                        case 9:
-                            max_days = 30;
-                            break;
-                        case 10:
-                            max_days = 31;
-                            break;
-                        case 11:
-                            max_days = 30;
-                            break;
-                        case 12:
-                            max_days = 31;
-                            break;
-                    }
+                    max_days = Maximum_Days_Month(month, today.Year);
                     if (day < max_days)
                     {
                         return true;
@@ -160,6 +155,39 @@ namespace Finance_Management
 
             }
             return false;
+        }
+
+        public string Get_Timestamp(ListBox year, ListBox month, ListBox day, ListBox hour, ListBox minute, ListBox AMPM)
+        {
+            if (year.Text == "")
+            {
+                return "";
+            }
+            else
+            {
+                string timestamp = year.Text;
+                if (month.Text != "")
+                {
+                    timestamp += "-" + month.Text;
+                    if (day.Text != "")
+                    {
+                        timestamp += "-" + day.Text;
+                        if (hour.Text != "")
+                        {
+                            if (AMPM.Text == "PM")
+                            {
+                                timestamp += " " + (int.Parse(hour.Text) + 12).ToString();
+                            }
+                            else
+                            {
+                                timestamp += " " + hour.Text;
+                            }
+                            timestamp += ":" + minute.Text + ":0";
+                        }
+                    }
+                }
+                return timestamp;
+            }
         }
     }
 }
