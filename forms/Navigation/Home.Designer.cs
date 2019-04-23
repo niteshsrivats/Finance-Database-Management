@@ -31,6 +31,7 @@
             this.Student = new System.Windows.Forms.Button();
             this.Staff = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
+            this.Search = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Student
@@ -38,9 +39,9 @@
             this.Student.BackColor = System.Drawing.SystemColors.Window;
             this.Student.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Student.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Student.Location = new System.Drawing.Point(283, 210);
+            this.Student.Location = new System.Drawing.Point(275, 185);
             this.Student.Name = "Student";
-            this.Student.Size = new System.Drawing.Size(363, 33);
+            this.Student.Size = new System.Drawing.Size(350, 30);
             this.Student.TabIndex = 1;
             this.Student.Text = "Student Transaction";
             this.Student.UseVisualStyleBackColor = false;
@@ -51,9 +52,9 @@
             this.Staff.BackColor = System.Drawing.SystemColors.Window;
             this.Staff.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Staff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Staff.Location = new System.Drawing.Point(283, 127);
+            this.Staff.Location = new System.Drawing.Point(275, 110);
             this.Staff.Name = "Staff";
-            this.Staff.Size = new System.Drawing.Size(363, 32);
+            this.Staff.Size = new System.Drawing.Size(350, 30);
             this.Staff.TabIndex = 0;
             this.Staff.Text = "Staff Transaction";
             this.Staff.UseVisualStyleBackColor = false;
@@ -64,13 +65,26 @@
             this.Add.BackColor = System.Drawing.SystemColors.Window;
             this.Add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Add.Location = new System.Drawing.Point(306, 293);
+            this.Add.Location = new System.Drawing.Point(300, 260);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(318, 31);
+            this.Add.Size = new System.Drawing.Size(300, 30);
             this.Add.TabIndex = 2;
             this.Add.Text = "Add New Entry";
             this.Add.UseVisualStyleBackColor = false;
             this.Add.Click += new System.EventHandler(this.Add_Click);
+            // 
+            // Search
+            // 
+            this.Search.BackColor = System.Drawing.SystemColors.Window;
+            this.Search.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Search.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Search.Location = new System.Drawing.Point(375, 335);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(150, 30);
+            this.Search.TabIndex = 3;
+            this.Search.Text = "Search";
+            this.Search.UseVisualStyleBackColor = false;
+            this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
             // Home
             // 
@@ -79,6 +93,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(882, 459);
+            this.Controls.Add(this.Search);
             this.Controls.Add(this.Add);
             this.Controls.Add(this.Staff);
             this.Controls.Add(this.Student);
@@ -94,5 +109,6 @@
         private System.Windows.Forms.Button Student;
         private System.Windows.Forms.Button Staff;
         private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.Button Search;
     }
 }
