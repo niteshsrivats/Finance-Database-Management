@@ -39,9 +39,9 @@
             this.Student.BackColor = System.Drawing.SystemColors.Window;
             this.Student.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Student.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Student.Location = new System.Drawing.Point(297, 121);
+            this.Student.Location = new System.Drawing.Point(275, 125);
             this.Student.Name = "Student";
-            this.Student.Size = new System.Drawing.Size(363, 32);
+            this.Student.Size = new System.Drawing.Size(350, 30);
             this.Student.TabIndex = 0;
             this.Student.Text = "Student";
             this.Student.UseVisualStyleBackColor = false;
@@ -52,9 +52,9 @@
             this.Staff.BackColor = System.Drawing.SystemColors.Window;
             this.Staff.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Staff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Staff.Location = new System.Drawing.Point(297, 196);
+            this.Staff.Location = new System.Drawing.Point(275, 200);
             this.Staff.Name = "Staff";
-            this.Staff.Size = new System.Drawing.Size(363, 32);
+            this.Staff.Size = new System.Drawing.Size(350, 30);
             this.Staff.TabIndex = 1;
             this.Staff.Text = "Staff";
             this.Staff.UseVisualStyleBackColor = false;
@@ -65,9 +65,9 @@
             this.Hostel.BackColor = System.Drawing.SystemColors.Window;
             this.Hostel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Hostel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Hostel.Location = new System.Drawing.Point(297, 261);
+            this.Hostel.Location = new System.Drawing.Point(275, 275);
             this.Hostel.Name = "Hostel";
-            this.Hostel.Size = new System.Drawing.Size(363, 32);
+            this.Hostel.Size = new System.Drawing.Size(350, 30);
             this.Hostel.TabIndex = 2;
             this.Hostel.Text = "Hostel";
             this.Hostel.UseVisualStyleBackColor = false;
@@ -78,9 +78,9 @@
             this.Back.BackColor = System.Drawing.SystemColors.Window;
             this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Back.Location = new System.Drawing.Point(44, 13);
+            this.Back.Location = new System.Drawing.Point(40, 30);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(93, 34);
+            this.Back.Size = new System.Drawing.Size(80, 30);
             this.Back.TabIndex = 3;
             this.Back.Text = "Back";
             this.Back.UseVisualStyleBackColor = false;

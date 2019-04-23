@@ -44,22 +44,23 @@
             // 
             // WardenBox
             // 
-            this.WardenBox.Location = new System.Drawing.Point(161, 86);
-            this.WardenBox.MaxLength = 10;
+            this.WardenBox.Location = new System.Drawing.Point(150, 90);
+            this.WardenBox.MaxLength = 6;
             this.WardenBox.Name = "WardenBox";
-            this.WardenBox.Size = new System.Drawing.Size(121, 22);
+            this.WardenBox.Size = new System.Drawing.Size(100, 22);
             this.WardenBox.TabIndex = 0;
             // 
             // SupervisorBox
             // 
-            this.SupervisorBox.Location = new System.Drawing.Point(161, 176);
-            this.SupervisorBox.MaxLength = 10;
+            this.SupervisorBox.Location = new System.Drawing.Point(150, 180);
+            this.SupervisorBox.MaxLength = 6;
             this.SupervisorBox.Name = "SupervisorBox";
-            this.SupervisorBox.Size = new System.Drawing.Size(121, 22);
+            this.SupervisorBox.Size = new System.Drawing.Size(100, 22);
             this.SupervisorBox.TabIndex = 1;
             // 
             // BlockList
             // 
+            this.BlockList.Cursor = System.Windows.Forms.Cursors.Cross;
             this.BlockList.FormattingEnabled = true;
             this.BlockList.ItemHeight = 16;
             this.BlockList.Items.AddRange(new object[] {
@@ -74,9 +75,9 @@
             "NGH2(G)",
             "NGH5(G)",
             "NH3(B)"});
-            this.BlockList.Location = new System.Drawing.Point(161, 262);
+            this.BlockList.Location = new System.Drawing.Point(150, 261);
             this.BlockList.Name = "BlockList";
-            this.BlockList.Size = new System.Drawing.Size(121, 36);
+            this.BlockList.Size = new System.Drawing.Size(100, 36);
             this.BlockList.Sorted = true;
             this.BlockList.TabIndex = 2;
             // 
@@ -85,9 +86,9 @@
             this.Submit.BackColor = System.Drawing.SystemColors.Window;
             this.Submit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Submit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Submit.Location = new System.Drawing.Point(383, 392);
+            this.Submit.Location = new System.Drawing.Point(410, 400);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(93, 34);
+            this.Submit.Size = new System.Drawing.Size(80, 30);
             this.Submit.TabIndex = 3;
             this.Submit.Text = "Submit";
             this.Submit.UseVisualStyleBackColor = false;
@@ -97,16 +98,16 @@
             // 
             this.DataView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.DataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataView.Location = new System.Drawing.Point(372, 67);
+            this.DataView.Location = new System.Drawing.Point(350, 90);
             this.DataView.Name = "DataView";
             this.DataView.RowTemplate.Height = 24;
-            this.DataView.Size = new System.Drawing.Size(480, 210);
+            this.DataView.Size = new System.Drawing.Size(480, 207);
             this.DataView.TabIndex = 5;
             // 
             // LabelWardenID
             // 
             this.LabelWardenID.AutoSize = true;
-            this.LabelWardenID.Location = new System.Drawing.Point(52, 86);
+            this.LabelWardenID.Location = new System.Drawing.Point(37, 93);
             this.LabelWardenID.Name = "LabelWardenID";
             this.LabelWardenID.Size = new System.Drawing.Size(75, 17);
             this.LabelWardenID.TabIndex = 6;
@@ -116,7 +117,7 @@
             // LabelSupervisorID
             // 
             this.LabelSupervisorID.AutoSize = true;
-            this.LabelSupervisorID.Location = new System.Drawing.Point(52, 176);
+            this.LabelSupervisorID.Location = new System.Drawing.Point(37, 183);
             this.LabelSupervisorID.Name = "LabelSupervisorID";
             this.LabelSupervisorID.Size = new System.Drawing.Size(93, 17);
             this.LabelSupervisorID.TabIndex = 7;
@@ -126,7 +127,7 @@
             // LabelBlockName
             // 
             this.LabelBlockName.AutoSize = true;
-            this.LabelBlockName.Location = new System.Drawing.Point(52, 272);
+            this.LabelBlockName.Location = new System.Drawing.Point(37, 270);
             this.LabelBlockName.Name = "LabelBlockName";
             this.LabelBlockName.Size = new System.Drawing.Size(83, 17);
             this.LabelBlockName.TabIndex = 8;
@@ -135,7 +136,7 @@
             // LabelSearch
             // 
             this.LabelSearch.AutoSize = true;
-            this.LabelSearch.Location = new System.Drawing.Point(444, 329);
+            this.LabelSearch.Location = new System.Drawing.Point(500, 329);
             this.LabelSearch.Name = "LabelSearch";
             this.LabelSearch.Size = new System.Drawing.Size(53, 17);
             this.LabelSearch.TabIndex = 9;
@@ -144,10 +145,10 @@
             // 
             // SearchBox
             // 
-            this.SearchBox.Location = new System.Drawing.Point(589, 326);
+            this.SearchBox.Location = new System.Drawing.Point(559, 326);
             this.SearchBox.MaxLength = 255;
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(121, 22);
+            this.SearchBox.Size = new System.Drawing.Size(100, 22);
             this.SearchBox.TabIndex = 4;
             this.SearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchBox_KeyDown);
             // 
@@ -156,9 +157,9 @@
             this.Back.BackColor = System.Drawing.SystemColors.Window;
             this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Back.Location = new System.Drawing.Point(13, 13);
+            this.Back.Location = new System.Drawing.Point(40, 30);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(93, 34);
+            this.Back.Size = new System.Drawing.Size(80, 30);
             this.Back.TabIndex = 6;
             this.Back.Text = "Back";
             this.Back.UseVisualStyleBackColor = false;

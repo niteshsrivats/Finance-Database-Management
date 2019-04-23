@@ -65,6 +65,12 @@
     <Compile Include="forms\Navigation\NewEntryMenu.Designer.cs">
       <DependentUpon>NewEntryMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\Navigation\SearchMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Navigation\SearchMenu.Designer.cs">
+      <DependentUpon>SearchMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\Navigation\StudentTransactionMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,19 @@
     <Compile Include="forms\Scholarship\ScholarshipTransaction.Designer.cs">
       <DependentUpon>ScholarshipTransaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\Search\SearchStudentTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Search\SearchStudentTransaction.Designer.cs">
+      <DependentUpon>SearchStudentTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Search\SearchStaffTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Search\SearchStaffTransaction.Designer.cs">
+      <DependentUpon>SearchStaffTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Search\TimeListAdder.cs" />
     <Compile Include="forms\Staff\StaffTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,11 +133,20 @@
     <EmbeddedResource Include="forms\Navigation\NewEntryMenu.resx">
       <DependentUpon>NewEntryMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\Navigation\SearchMenu.resx">
+      <DependentUpon>SearchMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\Navigation\StudentTransactionMenu.resx">
       <DependentUpon>StudentTransactionMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Scholarship\ScholarshipTransaction.resx">
       <DependentUpon>ScholarshipTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Search\SearchStudentTransaction.resx">
+      <DependentUpon>SearchStudentTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Search\SearchStaffTransaction.resx">
+      <DependentUpon>SearchStaffTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Staff\StaffTransaction.resx">
       <DependentUpon>StaffTransaction.cs</DependentUpon>

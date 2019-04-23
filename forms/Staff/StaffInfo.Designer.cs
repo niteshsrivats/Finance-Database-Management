@@ -42,24 +42,24 @@
             // 
             // EmployeeIDBox
             // 
-            this.EmployeeIDBox.Location = new System.Drawing.Point(367, 102);
-            this.EmployeeIDBox.MaxLength = 10;
+            this.EmployeeIDBox.Location = new System.Drawing.Point(400, 54);
+            this.EmployeeIDBox.MaxLength = 6;
             this.EmployeeIDBox.Name = "EmployeeIDBox";
-            this.EmployeeIDBox.Size = new System.Drawing.Size(140, 22);
+            this.EmployeeIDBox.Size = new System.Drawing.Size(100, 22);
             this.EmployeeIDBox.TabIndex = 0;
             // 
             // NameBox
             // 
-            this.NameBox.Location = new System.Drawing.Point(367, 169);
+            this.NameBox.Location = new System.Drawing.Point(400, 124);
             this.NameBox.MaxLength = 255;
             this.NameBox.Name = "NameBox";
-            this.NameBox.Size = new System.Drawing.Size(140, 22);
+            this.NameBox.Size = new System.Drawing.Size(100, 22);
             this.NameBox.TabIndex = 1;
             // 
             // LabelEmployeeID
             // 
             this.LabelEmployeeID.AutoSize = true;
-            this.LabelEmployeeID.Location = new System.Drawing.Point(222, 102);
+            this.LabelEmployeeID.Location = new System.Drawing.Point(277, 57);
             this.LabelEmployeeID.Name = "LabelEmployeeID";
             this.LabelEmployeeID.Size = new System.Drawing.Size(87, 17);
             this.LabelEmployeeID.TabIndex = 4;
@@ -69,7 +69,7 @@
             // LabelName
             // 
             this.LabelName.AutoSize = true;
-            this.LabelName.Location = new System.Drawing.Point(222, 174);
+            this.LabelName.Location = new System.Drawing.Point(277, 127);
             this.LabelName.Name = "LabelName";
             this.LabelName.Size = new System.Drawing.Size(45, 17);
             this.LabelName.TabIndex = 5;
@@ -81,9 +81,9 @@
             this.Submit.BackColor = System.Drawing.SystemColors.Window;
             this.Submit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Submit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Submit.Location = new System.Drawing.Point(381, 396);
+            this.Submit.Location = new System.Drawing.Point(410, 400);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(93, 34);
+            this.Submit.Size = new System.Drawing.Size(80, 30);
             this.Submit.TabIndex = 4;
             this.Submit.Text = "Submit";
             this.Submit.UseVisualStyleBackColor = false;
@@ -99,7 +99,7 @@
             "Non - Teaching Staff",
             "Security",
             "Teaching Staff"});
-            this.TypeList.Location = new System.Drawing.Point(367, 229);
+            this.TypeList.Location = new System.Drawing.Point(380, 194);
             this.TypeList.Name = "TypeList";
             this.TypeList.Size = new System.Drawing.Size(140, 68);
             this.TypeList.Sorted = true;
@@ -109,7 +109,7 @@
             // LabelType
             // 
             this.LabelType.AutoSize = true;
-            this.LabelType.Location = new System.Drawing.Point(227, 265);
+            this.LabelType.Location = new System.Drawing.Point(277, 220);
             this.LabelType.Name = "LabelType";
             this.LabelType.Size = new System.Drawing.Size(40, 17);
             this.LabelType.TabIndex = 14;
@@ -118,7 +118,7 @@
             // LabelDesignation
             // 
             this.LabelDesignation.AutoSize = true;
-            this.LabelDesignation.Location = new System.Drawing.Point(226, 347);
+            this.LabelDesignation.Location = new System.Drawing.Point(277, 323);
             this.LabelDesignation.Name = "LabelDesignation";
             this.LabelDesignation.Size = new System.Drawing.Size(83, 17);
             this.LabelDesignation.TabIndex = 15;
@@ -130,7 +130,7 @@
             this.DesignationList.Cursor = System.Windows.Forms.Cursors.Cross;
             this.DesignationList.FormattingEnabled = true;
             this.DesignationList.ItemHeight = 16;
-            this.DesignationList.Location = new System.Drawing.Point(367, 337);
+            this.DesignationList.Location = new System.Drawing.Point(380, 314);
             this.DesignationList.Name = "DesignationList";
             this.DesignationList.Size = new System.Drawing.Size(140, 36);
             this.DesignationList.Sorted = true;
@@ -142,9 +142,9 @@
             this.Back.BackColor = System.Drawing.SystemColors.Window;
             this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Back.Location = new System.Drawing.Point(25, 21);
+            this.Back.Location = new System.Drawing.Point(40, 30);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(93, 34);
+            this.Back.Size = new System.Drawing.Size(80, 30);
             this.Back.TabIndex = 5;
             this.Back.Text = "Back";
             this.Back.UseVisualStyleBackColor = false;
