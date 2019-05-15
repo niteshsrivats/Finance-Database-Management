@@ -1,5 +1,4 @@
-﻿using Finance_Management.forms.Hostel_Staff;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace Finance_Management.forms.Navigation
@@ -9,7 +8,6 @@ namespace Finance_Management.forms.Navigation
         private Home home;
         private StudentInfo studentInfo;
         private StaffInfo staffInfo;
-        private HostelStaff hostelStaff;
 
         public NewEntryMenu(Home home)
         {
@@ -17,7 +15,6 @@ namespace Finance_Management.forms.Navigation
             this.home = home;
             studentInfo = new StudentInfo(this);
             staffInfo = new StaffInfo(this);
-            hostelStaff = new HostelStaff(this);
         }
 
         private void Student_Click(object sender, EventArgs e)
@@ -29,12 +26,6 @@ namespace Finance_Management.forms.Navigation
         private void Staff_Click(object sender, EventArgs e)
         {
             staffInfo.Show();
-            Hide();
-        }
-
-        private void Hostel_Click(object sender, EventArgs e)
-        {
-            hostelStaff.Show();
             Hide();
         }
 

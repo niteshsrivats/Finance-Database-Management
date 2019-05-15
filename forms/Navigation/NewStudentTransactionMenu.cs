@@ -5,18 +5,18 @@ using System.Windows.Forms;
 
 namespace Finance_Management.forms.Navigation
 {
-    public partial class StudentTransactionMenu : Form
+    public partial class NewStudentTransactionMenu : Form
     {
-        private ScholarshipTransaction scholarshipTransaction;
+        private NewScholarshipTransaction scholarshipTransaction;
         private StudentTransaction studentTransaction;
-        private Home home;
+        private NewTransactionMenu newTransactionMenu;
 
-        public StudentTransactionMenu(Home home)
+        public NewStudentTransactionMenu(NewTransactionMenu newTransactionMenu)
         {
             InitializeComponent();
-            scholarshipTransaction = new ScholarshipTransaction(this);
+            scholarshipTransaction = new NewScholarshipTransaction(this);
             studentTransaction = new StudentTransaction(this);
-            this.home = home;
+            this.newTransactionMenu = newTransactionMenu;
         }
 
         private void Scholarship_Click(object sender, EventArgs e)
@@ -33,14 +33,14 @@ namespace Finance_Management.forms.Navigation
 
         private void Back_Click(object sender, EventArgs e)
         {
-            home.Show();
+            newTransactionMenu.Show();
             Hide();
         }
 
         private void StudentTransactionMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
-            home.Show();
+            newTransactionMenu.Show();
             Hide();
         }
     }

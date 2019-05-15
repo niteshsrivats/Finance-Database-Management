@@ -1,6 +1,6 @@
 ﻿namespace Finance_Management.forms.Navigation
 {
-    partial class NewEntryMenu
+    partial class NewStudentTransactionMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,36 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Student = new System.Windows.Forms.Button();
-            this.Staff = new System.Windows.Forms.Button();
+            this.Scholarship = new System.Windows.Forms.Button();
+            this.College = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Student
+            // Scholarship
             // 
-            this.Student.BackColor = System.Drawing.SystemColors.Window;
-            this.Student.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Student.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Student.Location = new System.Drawing.Point(275, 250);
-            this.Student.Name = "Student";
-            this.Student.Size = new System.Drawing.Size(350, 30);
-            this.Student.TabIndex = 1;
-            this.Student.Text = "Student";
-            this.Student.UseVisualStyleBackColor = false;
-            this.Student.Click += new System.EventHandler(this.Student_Click);
+            this.Scholarship.BackColor = System.Drawing.SystemColors.Window;
+            this.Scholarship.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Scholarship.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Scholarship.Location = new System.Drawing.Point(275, 250);
+            this.Scholarship.Name = "Scholarship";
+            this.Scholarship.Size = new System.Drawing.Size(350, 30);
+            this.Scholarship.TabIndex = 1;
+            this.Scholarship.Text = "Scholarship";
+            this.Scholarship.UseVisualStyleBackColor = false;
+            this.Scholarship.Click += new System.EventHandler(this.Scholarship_Click);
             // 
-            // Staff
+            // College
             // 
-            this.Staff.BackColor = System.Drawing.SystemColors.Window;
-            this.Staff.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Staff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Staff.Location = new System.Drawing.Point(275, 175);
-            this.Staff.Name = "Staff";
-            this.Staff.Size = new System.Drawing.Size(350, 30);
-            this.Staff.TabIndex = 0;
-            this.Staff.Text = "Staff";
-            this.Staff.UseVisualStyleBackColor = false;
-            this.Staff.Click += new System.EventHandler(this.Staff_Click);
+            this.College.BackColor = System.Drawing.SystemColors.Window;
+            this.College.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.College.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.College.Location = new System.Drawing.Point(275, 175);
+            this.College.Name = "College";
+            this.College.Size = new System.Drawing.Size(350, 30);
+            this.College.TabIndex = 0;
+            this.College.Text = "College";
+            this.College.UseVisualStyleBackColor = false;
+            this.College.Click += new System.EventHandler(this.College_Click);
             // 
             // Back
             // 
@@ -72,27 +72,27 @@
             this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
-            // NewEntryMenu
+            // NewStudentTransactionMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(882, 459);
             this.Controls.Add(this.Back);
-            this.Controls.Add(this.Staff);
-            this.Controls.Add(this.Student);
-            this.Name = "NewEntryMenu";
+            this.Controls.Add(this.College);
+            this.Controls.Add(this.Scholarship);
+            this.Name = "NewStudentTransactionMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "New Entry Menu";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NewEntryMenu_FormClosing);
+            this.Text = "New Student Transaction Menu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentTransactionMenu_FormClosing);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button Student;
-        private System.Windows.Forms.Button Staff;
+        private System.Windows.Forms.Button Scholarship;
+        private System.Windows.Forms.Button College;
         private System.Windows.Forms.Button Back;
     }
 }

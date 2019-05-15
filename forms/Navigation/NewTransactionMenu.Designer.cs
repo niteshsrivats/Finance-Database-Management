@@ -1,6 +1,6 @@
 ﻿namespace Finance_Management.forms.Navigation
 {
-    partial class NewEntryMenu
+    partial class NewTransactionMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,23 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Student = new System.Windows.Forms.Button();
             this.Staff = new System.Windows.Forms.Button();
+            this.Student = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // Student
-            // 
-            this.Student.BackColor = System.Drawing.SystemColors.Window;
-            this.Student.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Student.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Student.Location = new System.Drawing.Point(275, 250);
-            this.Student.Name = "Student";
-            this.Student.Size = new System.Drawing.Size(350, 30);
-            this.Student.TabIndex = 1;
-            this.Student.Text = "Student";
-            this.Student.UseVisualStyleBackColor = false;
-            this.Student.Click += new System.EventHandler(this.Student_Click);
             // 
             // Staff
             // 
@@ -59,6 +46,19 @@
             this.Staff.UseVisualStyleBackColor = false;
             this.Staff.Click += new System.EventHandler(this.Staff_Click);
             // 
+            // Student
+            // 
+            this.Student.BackColor = System.Drawing.SystemColors.Window;
+            this.Student.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Student.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Student.Location = new System.Drawing.Point(275, 250);
+            this.Student.Name = "Student";
+            this.Student.Size = new System.Drawing.Size(350, 30);
+            this.Student.TabIndex = 1;
+            this.Student.Text = "Student";
+            this.Student.UseVisualStyleBackColor = false;
+            this.Student.Click += new System.EventHandler(this.Student_Click);
+            // 
             // Back
             // 
             this.Back.BackColor = System.Drawing.SystemColors.Window;
@@ -72,27 +72,27 @@
             this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
-            // NewEntryMenu
+            // NewTransactionMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(882, 459);
             this.Controls.Add(this.Back);
-            this.Controls.Add(this.Staff);
             this.Controls.Add(this.Student);
-            this.Name = "NewEntryMenu";
+            this.Controls.Add(this.Staff);
+            this.Name = "NewTransactionMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "New Entry Menu";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NewEntryMenu_FormClosing);
+            this.Text = "New Transaction Menu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NewTransactionMenu_FormClosing);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button Student;
         private System.Windows.Forms.Button Staff;
+        private System.Windows.Forms.Button Student;
         private System.Windows.Forms.Button Back;
     }
 }

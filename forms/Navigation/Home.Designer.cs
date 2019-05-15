@@ -28,47 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Student = new System.Windows.Forms.Button();
-            this.Staff = new System.Windows.Forms.Button();
+            this.Transaction = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
             this.Search = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Student
+            // Transaction
             // 
-            this.Student.BackColor = System.Drawing.SystemColors.Window;
-            this.Student.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Student.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Student.Location = new System.Drawing.Point(275, 185);
-            this.Student.Name = "Student";
-            this.Student.Size = new System.Drawing.Size(350, 30);
-            this.Student.TabIndex = 1;
-            this.Student.Text = "Student Transaction";
-            this.Student.UseVisualStyleBackColor = false;
-            this.Student.Click += new System.EventHandler(this.Student_Click);
-            // 
-            // Staff
-            // 
-            this.Staff.BackColor = System.Drawing.SystemColors.Window;
-            this.Staff.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Staff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Staff.Location = new System.Drawing.Point(275, 110);
-            this.Staff.Name = "Staff";
-            this.Staff.Size = new System.Drawing.Size(350, 30);
-            this.Staff.TabIndex = 0;
-            this.Staff.Text = "Staff Transaction";
-            this.Staff.UseVisualStyleBackColor = false;
-            this.Staff.Click += new System.EventHandler(this.Staff_Click);
+            this.Transaction.BackColor = System.Drawing.SystemColors.Window;
+            this.Transaction.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Transaction.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Transaction.Location = new System.Drawing.Point(275, 150);
+            this.Transaction.Name = "Transaction";
+            this.Transaction.Size = new System.Drawing.Size(350, 30);
+            this.Transaction.TabIndex = 0;
+            this.Transaction.Text = "New Transaction";
+            this.Transaction.UseVisualStyleBackColor = false;
+            this.Transaction.Click += new System.EventHandler(this.Transaction_Click);
             // 
             // Add
             // 
             this.Add.BackColor = System.Drawing.SystemColors.Window;
             this.Add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Add.Location = new System.Drawing.Point(300, 260);
+            this.Add.Location = new System.Drawing.Point(300, 225);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(300, 30);
-            this.Add.TabIndex = 2;
+            this.Add.TabIndex = 1;
             this.Add.Text = "Add New Entry";
             this.Add.UseVisualStyleBackColor = false;
             this.Add.Click += new System.EventHandler(this.Add_Click);
@@ -78,10 +64,10 @@
             this.Search.BackColor = System.Drawing.SystemColors.Window;
             this.Search.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Search.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Search.Location = new System.Drawing.Point(375, 335);
+            this.Search.Location = new System.Drawing.Point(375, 300);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(150, 30);
-            this.Search.TabIndex = 3;
+            this.Search.TabIndex = 2;
             this.Search.Text = "Search";
             this.Search.UseVisualStyleBackColor = false;
             this.Search.Click += new System.EventHandler(this.Search_Click);
@@ -95,8 +81,7 @@
             this.ClientSize = new System.Drawing.Size(882, 459);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.Add);
-            this.Controls.Add(this.Staff);
-            this.Controls.Add(this.Student);
+            this.Controls.Add(this.Transaction);
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
@@ -105,9 +90,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button Student;
-        private System.Windows.Forms.Button Staff;
+        private System.Windows.Forms.Button Transaction;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Button Search;
     }

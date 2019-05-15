@@ -83,7 +83,7 @@
             this.Controls.Add(this.Staff);
             this.Name = "SearchMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SearchMenu";
+            this.Text = "Search Menu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SearchMenu_FormClosing);
             this.ResumeLayout(false);
 
