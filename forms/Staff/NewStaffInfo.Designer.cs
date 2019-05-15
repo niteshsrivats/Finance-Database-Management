@@ -43,7 +43,7 @@
             // EmployeeIDBox
             // 
             this.EmployeeIDBox.Location = new System.Drawing.Point(400, 54);
-            this.EmployeeIDBox.MaxLength = 6;
+            this.EmployeeIDBox.MaxLength = 7;
             this.EmployeeIDBox.Name = "EmployeeIDBox";
             this.EmployeeIDBox.Size = new System.Drawing.Size(100, 22);
             this.EmployeeIDBox.TabIndex = 0;

@@ -5,21 +5,21 @@ using System.Windows.Forms;
 
 namespace Finance_Management.forms.Staff_Info
 {
-    public partial class StaffTransaction : Form
+    public partial class NewStaffTransaction : Form
     {
         private SQL_Operator sql_operator = new SQL_Operator();
         private Validation validation = new Validation();
-        private Home home;
+        private NewTransactionMenu newTransactionMenu;
 
-        public StaffTransaction(Home home)
+        public NewStaffTransaction(NewTransactionMenu newTransactionMenu)
         {
             InitializeComponent();
-            this.home = home;
+            this.newTransactionMenu = newTransactionMenu;
         }
 
         private string Get_Search_Query()
         {
-            string sqlQuery = "SELECT EMPLOYEE_ID \"Employee ID\", NAME \"Name\", JOIN_DATE \"Join Date\" FROM STAFF_INFO";
+            string sqlQuery = "SELECT EMPLOYEE_ID \"Employee ID\", NAME \"Name\", JOIN_DATE \"Join Date\", type \"Type\", designation \"Designation\" FROM STAFF_INFO";
             Regex searchExp = new Regex("[0-9]+");
             if (searchExp.Match(SearchBox.Text).Success)
             {
@@ -61,14 +61,14 @@ namespace Finance_Management.forms.Staff_Info
                 MessageBox.Show("Invalid Employee ID", "Invalid Employee ID Error");
                 return false;
             }
-            else if (!validation.Amount(AmountBox.Text))
-            {
-                MessageBox.Show("Enter Positive Amount", "Invalid Amount Error");
-                return false;
-            }
             else if (!validation.ListBox(CategoryList.Text))
             {
                 MessageBox.Show("Select Transaction Category", "Invalid Transaction Category Error");
+                return false;
+            }
+            else if (!CategoryList.Text.Equals("Salary") && !validation.Amount(AmountBox.Text))
+            {
+                MessageBox.Show("Enter Positive Amount", "Invalid Amount Error");
                 return false;
             }
             return true;
@@ -89,10 +89,18 @@ namespace Finance_Management.forms.Staff_Info
             {
                 DateTime today = DateTime.Now;
                 string time = today.Year.ToString() + "-" + today.Month.ToString() + "-" + today.Day.ToString() + " " + today.Hour.ToString() + ":" + today.Minute.ToString() + ":" + today.Second.ToString();
-                int amount = int.Parse(AmountBox.Text);
-                if (Debit.Checked)
-                    amount *= -1;
-                string sqlQuery = "INSERT INTO STAFF_TRANSACTION (EMPLOYEE_ID, TYPE, TIME, AMOUNT) VALUES ('" + EmployeeIDBox.Text.ToUpper() + "', 'STAFF: " + CategoryList.Text.ToUpper() + "', TIMESTAMP '" + time + "', " + amount + ")";
+                string sqlQuery;
+                if (CategoryList.Text.Equals("Salary"))
+                {
+                    sqlQuery = "INSERT INTO STAFF_TRANSACTION (employee_id, type, time, amount) VALUES ('" + EmployeeIDBox.Text.ToUpper() + "', '" + CategoryList.Text.ToUpper() + "', TIMESTAMP '" + time + "', (SELECT DISTINCT(amount) FROM STAFF_TRANSACTION WHERE employee_id='" + EmployeeIDBox.Text.ToUpper() + "' AND type='Salary'))";
+                }
+                else
+                {
+                    int amount = int.Parse(AmountBox.Text);
+                    if (Debit.Checked)
+                        amount *= -1;
+                    sqlQuery = "INSERT INTO STAFF_TRANSACTION (employee_id, type, time, amount) VALUES ('" + EmployeeIDBox.Text.ToUpper() + "', '" + CategoryList.Text.ToUpper() + "', TIMESTAMP '" + time + "', " + amount + ")";
+                }
                 if (sql_operator.Insert(sqlQuery))
                 {
                     MessageBox.Show("Inserted Entry", "Successful");
@@ -120,9 +128,23 @@ namespace Finance_Management.forms.Staff_Info
             SearchBox.Select();
         }
 
+        private void CategoryList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AmountBox.Enabled = false;
+            switch (CategoryList.Text)
+            {
+                case "Salary":
+                    AmountBox.Text = "";
+                    break;
+                default:
+                    AmountBox.Enabled = true;
+                    break;
+            }
+        }
+
         private void Back_Click(object sender, EventArgs e)
         {
-            home.Show();
+            newTransactionMenu.Show();
             Hide();
             Clear_All_Entries();
         }
@@ -130,9 +152,10 @@ namespace Finance_Management.forms.Staff_Info
         private void StaffTransaction_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
-            home.Show();
+            newTransactionMenu.Show();
             Hide();
             Clear_All_Entries();
         }
+
     }
 }

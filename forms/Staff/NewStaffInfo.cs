@@ -81,7 +81,7 @@ namespace Finance_Management
             {
                 DateTime today = DateTime.Today;
                 string date = today.Year.ToString() + "-" + today.Month.ToString() + "-" + today.Day.ToString();
-                string sqlQuery = "INSERT INTO STAFF_INFO (EMPLOYEE_ID, NAME, TYPE, JOIN_DATE, DESIGNATION) VALUES ('" + EmployeeIDBox.Text.ToUpper() + "', '" + NameBox.Text.ToUpper() + "', '" + TypeList.Text.ToUpper() + "', date '" + date + "', '" + DesignationList.Text.ToUpper() + "')";
+                string sqlQuery = "INSERT INTO STAFF_INFO (employee_id, name, type, join_date, designation) VALUES ('" + EmployeeIDBox.Text.ToUpper() + "', '" + NameBox.Text.ToUpper() + "', '" + TypeList.Text.ToUpper() + "', date '" + date + "', '" + DesignationList.Text.ToUpper() + "')";
                 if (sql_operator.Insert(sqlQuery))
                 {
                     MessageBox.Show("Inserted Entry", "Successful");
