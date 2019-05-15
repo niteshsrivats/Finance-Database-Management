@@ -51,7 +51,7 @@
             this.USNBox.MaxLength = 10;
             this.USNBox.Name = "USNBox";
             this.USNBox.Size = new System.Drawing.Size(100, 22);
-            this.USNBox.TabIndex = 1;
+            this.USNBox.TabIndex = 0;
             // 
             // LabelUSN
             // 
@@ -82,7 +82,8 @@
             this.CategoryList.Name = "CategoryList";
             this.CategoryList.Size = new System.Drawing.Size(190, 84);
             this.CategoryList.Sorted = true;
-            this.CategoryList.TabIndex = 5;
+            this.CategoryList.TabIndex = 4;
+            this.CategoryList.SelectedIndexChanged += new System.EventHandler(this.CategoryList_SelectedIndexChanged);
             this.CategoryList.SelectedValueChanged += new System.EventHandler(this.CategoryList_SelectedValueChanged);
             // 
             // LabelCategory
@@ -97,7 +98,7 @@
             // LabelAmount
             // 
             this.LabelAmount.AutoSize = true;
-            this.LabelAmount.Location = new System.Drawing.Point(39, 165);
+            this.LabelAmount.Location = new System.Drawing.Point(39, 225);
             this.LabelAmount.Name = "LabelAmount";
             this.LabelAmount.Size = new System.Drawing.Size(56, 17);
             this.LabelAmount.TabIndex = 4;
@@ -106,21 +107,22 @@
             // 
             // AmountBox
             // 
-            this.AmountBox.Location = new System.Drawing.Point(161, 162);
+            this.AmountBox.Enabled = false;
+            this.AmountBox.Location = new System.Drawing.Point(161, 224);
             this.AmountBox.MaxLength = 9;
             this.AmountBox.Name = "AmountBox";
             this.AmountBox.Size = new System.Drawing.Size(100, 22);
-            this.AmountBox.TabIndex = 2;
+            this.AmountBox.TabIndex = 3;
             // 
             // Credit
             // 
             this.Credit.AutoSize = true;
             this.Credit.Checked = true;
             this.Credit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Credit.Location = new System.Drawing.Point(161, 224);
+            this.Credit.Location = new System.Drawing.Point(161, 162);
             this.Credit.Name = "Credit";
             this.Credit.Size = new System.Drawing.Size(66, 21);
-            this.Credit.TabIndex = 3;
+            this.Credit.TabIndex = 1;
             this.Credit.TabStop = true;
             this.Credit.Text = "Credit";
             this.Credit.UseVisualStyleBackColor = true;
@@ -130,10 +132,10 @@
             this.Debit.AutoSize = true;
             this.Debit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Debit.Enabled = false;
-            this.Debit.Location = new System.Drawing.Point(233, 224);
+            this.Debit.Location = new System.Drawing.Point(233, 162);
             this.Debit.Name = "Debit";
             this.Debit.Size = new System.Drawing.Size(62, 21);
-            this.Debit.TabIndex = 4;
+            this.Debit.TabIndex = 2;
             this.Debit.Text = "Debit";
             this.Debit.UseVisualStyleBackColor = true;
             // 
@@ -160,9 +162,10 @@
             // SearchBox
             // 
             this.SearchBox.Location = new System.Drawing.Point(559, 304);
+            this.SearchBox.MaxLength = 255;
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(100, 22);
-            this.SearchBox.TabIndex = 7;
+            this.SearchBox.TabIndex = 6;
             this.SearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchBox_KeyDown);
             // 
             // Submit
@@ -173,7 +176,7 @@
             this.Submit.Location = new System.Drawing.Point(410, 400);
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(80, 30);
-            this.Submit.TabIndex = 6;
+            this.Submit.TabIndex = 5;
             this.Submit.Text = "Submit";
             this.Submit.UseVisualStyleBackColor = false;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
@@ -186,7 +189,7 @@
             this.Back.Location = new System.Drawing.Point(40, 30);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(80, 30);
-            this.Back.TabIndex = 9;
+            this.Back.TabIndex = 7;
             this.Back.Text = "Back";
             this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
@@ -194,7 +197,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 226);
+            this.label1.Location = new System.Drawing.Point(39, 165);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 17);
             this.label1.TabIndex = 10;

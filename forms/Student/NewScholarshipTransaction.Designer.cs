@@ -37,6 +37,8 @@
             this.LabelSearch = new System.Windows.Forms.Label();
             this.ScholarshipNameList = new System.Windows.Forms.ListBox();
             this.Back = new System.Windows.Forms.Button();
+            this.AmountBox = new System.Windows.Forms.TextBox();
+            this.LabelAmount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DataView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +50,7 @@
             this.Submit.Location = new System.Drawing.Point(410, 400);
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(80, 30);
-            this.Submit.TabIndex = 4;
+            this.Submit.TabIndex = 3;
             this.Submit.Text = "Submit";
             this.Submit.UseVisualStyleBackColor = false;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
@@ -74,7 +76,7 @@
             // 
             // USNBox
             // 
-            this.USNBox.Location = new System.Drawing.Point(112, 253);
+            this.USNBox.Location = new System.Drawing.Point(112, 255);
             this.USNBox.MaxLength = 10;
             this.USNBox.Name = "USNBox";
             this.USNBox.Size = new System.Drawing.Size(100, 22);
@@ -85,6 +87,7 @@
             this.DataView.AllowUserToOrderColumns = true;
             this.DataView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.DataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataView.Cursor = System.Windows.Forms.Cursors.Default;
             this.DataView.Location = new System.Drawing.Point(400, 60);
             this.DataView.Name = "DataView";
             this.DataView.RowTemplate.Height = 24;
@@ -97,7 +100,7 @@
             this.SearchBox.MaxLength = 255;
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(100, 22);
-            this.SearchBox.TabIndex = 5;
+            this.SearchBox.TabIndex = 4;
             this.SearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchBox_KeyDown);
             // 
             // LabelSearch
@@ -130,7 +133,8 @@
             this.ScholarshipNameList.Name = "ScholarshipNameList";
             this.ScholarshipNameList.Size = new System.Drawing.Size(270, 100);
             this.ScholarshipNameList.Sorted = true;
-            this.ScholarshipNameList.TabIndex = 3;
+            this.ScholarshipNameList.TabIndex = 0;
+            this.ScholarshipNameList.SelectedIndexChanged += new System.EventHandler(this.ScholarshipNameList_SelectedIndexChanged);
             // 
             // Back
             // 
@@ -140,10 +144,28 @@
             this.Back.Location = new System.Drawing.Point(40, 30);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(80, 30);
-            this.Back.TabIndex = 7;
+            this.Back.TabIndex = 5;
             this.Back.Text = "Back";
             this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
+            // AmountBox
+            // 
+            this.AmountBox.Enabled = false;
+            this.AmountBox.Location = new System.Drawing.Point(112, 315);
+            this.AmountBox.MaxLength = 9;
+            this.AmountBox.Name = "AmountBox";
+            this.AmountBox.Size = new System.Drawing.Size(100, 22);
+            this.AmountBox.TabIndex = 2;
+            // 
+            // LabelAmount
+            // 
+            this.LabelAmount.AutoSize = true;
+            this.LabelAmount.Location = new System.Drawing.Point(24, 316);
+            this.LabelAmount.Name = "LabelAmount";
+            this.LabelAmount.Size = new System.Drawing.Size(56, 17);
+            this.LabelAmount.TabIndex = 9;
+            this.LabelAmount.Text = "Amount";
             // 
             // NewScholarshipTransaction
             // 
@@ -151,6 +173,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(882, 459);
+            this.Controls.Add(this.LabelAmount);
+            this.Controls.Add(this.AmountBox);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.ScholarshipNameList);
             this.Controls.Add(this.LabelSearch);
@@ -180,5 +204,7 @@
         private System.Windows.Forms.Label LabelSearch;
         private System.Windows.Forms.ListBox ScholarshipNameList;
         private System.Windows.Forms.Button Back;
+        private System.Windows.Forms.TextBox AmountBox;
+        private System.Windows.Forms.Label LabelAmount;
     }
 }

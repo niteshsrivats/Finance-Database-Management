@@ -9,9 +9,9 @@ namespace Finance_Management.forms.Student_Info
     {
         private SQL_Operator sql_operator = new SQL_Operator();
         private Validation validation = new Validation();
-        private StudentTransactionMenu studentTransactionMenu;
+        private NewStudentTransactionMenu studentTransactionMenu;
 
-        public StudentTransaction(StudentTransactionMenu studentTransactionMenu)
+        public StudentTransaction(NewStudentTransactionMenu studentTransactionMenu)
         {
             InitializeComponent();
             this.studentTransactionMenu = studentTransactionMenu;
@@ -19,7 +19,7 @@ namespace Finance_Management.forms.Student_Info
 
         private string Get_Search_Query()
         {
-            string sqlQuery = "SELECT USN, NAME \"Name\", GRADUATION_YEAR \"Graduation Year\" FROM STUDENT_INFO";
+            string sqlQuery = "SELECT usn, name \"Name\", graduation_year \"Graduation Year\" FROM STUDENT_INFO";
             Regex searchExp = new Regex("[0-9]+");
             if (searchExp.Match(SearchBox.Text).Success)
             {
@@ -93,7 +93,7 @@ namespace Finance_Management.forms.Student_Info
                 if (Debit.Checked)
                     amount *= -1;
 
-                string sqlQuery = "INSERT INTO STUDENT_TRANSACTION (USN, TYPE, TIME, AMOUNT) VALUES ('" + USNBox.Text.ToUpper() + "', '" + CategoryList.Text.ToUpper() + "', TIMESTAMP '" + time + "', " + amount + ")";
+                string sqlQuery = "INSERT INTO STUDENT_TRANSACTION (usn, type, time, amount) VALUES ('" + USNBox.Text.ToUpper() + "', '" + CategoryList.Text.ToUpper() + "', TIMESTAMP '" + time + "', " + amount + ")";
                 if (sql_operator.Insert(sqlQuery))
                 {
                     MessageBox.Show("Inserted Entry", "Successful");
@@ -134,6 +134,38 @@ namespace Finance_Management.forms.Student_Info
             studentTransactionMenu.Show();
             Hide();
             Clear_All_Entries();
+        }
+
+        private void CategoryList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AmountBox.Enabled = false;
+            switch (CategoryList.Text)
+            {
+                case "College: Make Up Exam":
+                    AmountBox.Text = "4000";
+                    break;
+                case "Hostel: Security Deposit":
+                    AmountBox.Text = "10000";
+                    break;
+                case "College: Re-Evaluation":
+                    AmountBox.Text = "600";
+                    break;
+                case "College: Library Charges":
+                    AmountBox.Text = "200";
+                    break;
+                case "College: Tuition Fee":
+                    AmountBox.Text = "80000";
+                    break;
+                case "College: ID Card Charges":
+                    AmountBox.Text = "300";
+                    break;
+                case "Hostel: Fees":
+                    AmountBox.Text = "150000";
+                    break;
+                default:
+                    AmountBox.Enabled = true;
+                    break;
+            }
         }
     }
 }

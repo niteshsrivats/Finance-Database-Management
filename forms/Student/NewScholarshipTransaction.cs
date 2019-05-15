@@ -11,7 +11,6 @@ namespace Finance_Management.forms.Scholarship
         private Validation validation = new Validation();
         private NewStudentTransactionMenu studentTransactionMenu;
         private string scholarshipID;
-        private string amount;
 
         public NewScholarshipTransaction(NewStudentTransactionMenu studentTransactionMenu)
         {
@@ -21,7 +20,7 @@ namespace Finance_Management.forms.Scholarship
 
         private string Get_Search_Query()
         {
-            string sqlQuery = "SELECT USN, NAME \"Name\", GRADUATION_YEAR \"Graduation Year\" FROM STUDENT_INFO";
+            string sqlQuery = "SELECT usn, name \"Name\", graduation_year \"Graduation Year\" FROM STUDENT_INFO";
             Regex searchExp = new Regex("[0-9]+");
             if (searchExp.Match(SearchBox.Text).Success)
             {
@@ -55,49 +54,6 @@ namespace Finance_Management.forms.Scholarship
                 MessageBox.Show("Select Scholarship Name", "Invalid Scholarship Name Error");
                 return false;
             }
-            switch (ScholarshipNameList.Text)
-            {
-                case "KCET Scholarship For Defence Wards":
-                    scholarshipID = "KCET_DEF";
-                    amount = "-6500";
-                    break;
-                case "National College Scholarship ":
-                    scholarshipID = "NAT_COLL";
-                    amount = "-8000";
-                    break;
-                case "Bal Vidhya Scholarship":
-                    scholarshipID = "BAL_VID";
-                    amount = "-12500";
-                    break;
-                case "Girl Child Scholarship":
-                    scholarshipID = "GIRL_CHLD";
-                    amount = "-5000";
-                    break;
-                case "Sri Visveswaraya Scholarship":
-                    scholarshipID = "SRI_VIS";
-                    amount = "-7500";
-                    break;
-                case "NCC Scholarship For Undergraduates":
-                    scholarshipID = "NCC_UG";
-                    amount = "-15000";
-                    break;
-                case "Maritime Scholarship For Engineers":
-                    scholarshipID = "MAR_ENG";
-                    amount = "-9000";
-                    break;
-                case "Excel Student Scholarship":
-                    scholarshipID = "EXC_STU";
-                    amount = "-10000";
-                    break;
-                case "SC/ST Undergraduates Scholarship":
-                    scholarshipID = "SC_ST";
-                    amount = "-6000";
-                    break;
-                case "Krishi Vidhya Scholarship":
-                    scholarshipID = "KRI_VID";
-                    amount = "-3000";
-                    break;
-            }
             return true;
         }
 
@@ -106,6 +62,7 @@ namespace Finance_Management.forms.Scholarship
             USNBox.Clear();
             ScholarshipNameList.ClearSelected();
             SearchBox.Clear();
+            AmountBox.Clear();
             DataView.DataSource = null;
         }
 
@@ -116,7 +73,7 @@ namespace Finance_Management.forms.Scholarship
                 DateTime today = DateTime.Now;
                 string time = today.Year.ToString() + "-" + today.Month.ToString() + "-" + today.Day.ToString() + " " + today.Hour.ToString() + ":" + today.Minute.ToString() + ":" + today.Second.ToString();
       
-                string sqlQuery = "INSERT INTO SCHOLARSHIP_TRANSACTION(scholarship_id, usn, time, amount) VALUES ('" + scholarshipID + "', '" + USNBox.Text.ToUpper() + "', timestamp '" + time + "', " + amount + ")";
+                string sqlQuery = "INSERT INTO SCHOLARSHIP_TRANSACTION(scholarship_id, usn, time, amount) VALUES ('" + scholarshipID + "', '" + USNBox.Text.ToUpper() + "', timestamp '" + time + "', -" + AmountBox.Text + ")";
         
                 if (sql_operator.Insert(sqlQuery))
                 {
@@ -139,6 +96,53 @@ namespace Finance_Management.forms.Scholarship
         private void LabelSearch_Click(object sender, EventArgs e)
         {
             SearchBox.Select();
+        }
+
+        private void ScholarshipNameList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (ScholarshipNameList.Text)
+            {
+                case "KCET Scholarship For Defence Wards":
+                    scholarshipID = "KCET_DEF";
+                    AmountBox.Text = "6500";
+                    break;
+                case "National College Scholarship ":
+                    scholarshipID = "NAT_COLL";
+                    AmountBox.Text = "8000";
+                    break;
+                case "Bal Vidhya Scholarship":
+                    scholarshipID = "BAL_VID";
+                    AmountBox.Text = "12500";
+                    break;
+                case "Girl Child Scholarship":
+                    scholarshipID = "GIRL_CHLD";
+                    AmountBox.Text = "5000";
+                    break;
+                case "Sri Visveswaraya Scholarship":
+                    scholarshipID = "SRI_VIS";
+                    AmountBox.Text = "7500";
+                    break;
+                case "NCC Scholarship For Undergraduates":
+                    scholarshipID = "NCC_UG";
+                    AmountBox.Text = "15000";
+                    break;
+                case "Maritime Scholarship For Engineers":
+                    scholarshipID = "MAR_ENG";
+                    AmountBox.Text = "9000";
+                    break;
+                case "Excel Student Scholarship":
+                    scholarshipID = "EXC_STU";
+                    AmountBox.Text = "10000";
+                    break;
+                case "SC/ST Undergraduates Scholarship":
+                    scholarshipID = "SC_ST";
+                    AmountBox.Text = "6000";
+                    break;
+                case "Krishi Vidhya Scholarship":
+                    scholarshipID = "KRI_VID";
+                    AmountBox.Text = "3000";
+                    break;
+            }
         }
 
         private void Back_Click(object sender, EventArgs e)

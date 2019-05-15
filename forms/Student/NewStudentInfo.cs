@@ -53,11 +53,11 @@ namespace Finance_Management
                 string sqlQuery = null;
                 if (YesButton.Checked)
                 {
-                    sqlQuery = "INSERT INTO STUDENT_INFO (USN, NAME, DOB, GRADUATION_YEAR, HOSTEL_ID) VALUES ('" + USNBox.Text.ToUpper() + "', '" + NameBox.Text.ToUpper() + "', DATE '" + DOBBox.Text + "', " + graduation_year + ", HOSTEL_ID_SEQUENCE.NEXTVAL)";
+                    sqlQuery = "INSERT INTO STUDENT_INFO (usn, name, dob, graduation_year, hostel_id) VALUES ('" + USNBox.Text.ToUpper() + "', '" + NameBox.Text.ToUpper() + "', DATE '" + DOBBox.Text + "', " + graduation_year + ", HOSTEL_ID_SEQUENCE.NEXTVAL)";
                 }
                 else
                 {
-                    sqlQuery = "INSERT INTO STUDENT_INFO (USN, NAME, DOB, GRADUATION_YEAR) VALUES ('" + USNBox.Text.ToUpper() + "', '" + NameBox.Text.ToUpper() + "', DATE '" + DOBBox.Text + "', " + graduation_year + ")";
+                    sqlQuery = "INSERT INTO STUDENT_INFO (usn, name, dob, graduation_year) VALUES ('" + USNBox.Text.ToUpper() + "', '" + NameBox.Text.ToUpper() + "', DATE '" + DOBBox.Text + "', " + graduation_year + ")";
                 }
                 if (sql_operator.Insert(sqlQuery))
                 {

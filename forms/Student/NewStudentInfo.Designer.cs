@@ -92,7 +92,7 @@
             this.Submit.Location = new System.Drawing.Point(410, 400);
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(80, 30);
-            this.Submit.TabIndex = 6;
+            this.Submit.TabIndex = 5;
             this.Submit.Text = "Submit";
             this.Submit.UseVisualStyleBackColor = false;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
@@ -104,7 +104,7 @@
             this.NameBox.MaxLength = 255;
             this.NameBox.Name = "NameBox";
             this.NameBox.Size = new System.Drawing.Size(100, 22);
-            this.NameBox.TabIndex = 1;
+            this.NameBox.TabIndex = 0;
             // 
             // USNBox
             // 
@@ -113,7 +113,7 @@
             this.USNBox.MaxLength = 10;
             this.USNBox.Name = "USNBox";
             this.USNBox.Size = new System.Drawing.Size(99, 22);
-            this.USNBox.TabIndex = 2;
+            this.USNBox.TabIndex = 1;
             // 
             // DOBBox
             // 
@@ -121,7 +121,7 @@
             this.DOBBox.MaxLength = 10;
             this.DOBBox.Name = "DOBBox";
             this.DOBBox.Size = new System.Drawing.Size(100, 22);
-            this.DOBBox.TabIndex = 3;
+            this.DOBBox.TabIndex = 2;
             // 
             // YesButton
             // 
@@ -130,7 +130,7 @@
             this.YesButton.Location = new System.Drawing.Point(400, 329);
             this.YesButton.Name = "YesButton";
             this.YesButton.Size = new System.Drawing.Size(53, 21);
-            this.YesButton.TabIndex = 4;
+            this.YesButton.TabIndex = 3;
             this.YesButton.Text = "Yes";
             this.YesButton.UseVisualStyleBackColor = true;
             // 
@@ -142,7 +142,7 @@
             this.NoButton.Location = new System.Drawing.Point(452, 329);
             this.NoButton.Name = "NoButton";
             this.NoButton.Size = new System.Drawing.Size(47, 21);
-            this.NoButton.TabIndex = 5;
+            this.NoButton.TabIndex = 4;
             this.NoButton.TabStop = true;
             this.NoButton.Text = "No";
             this.NoButton.UseVisualStyleBackColor = true;
@@ -155,7 +155,7 @@
             this.Back.Location = new System.Drawing.Point(40, 30);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(80, 30);
-            this.Back.TabIndex = 7;
+            this.Back.TabIndex = 6;
             this.Back.Text = "Back";
             this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
