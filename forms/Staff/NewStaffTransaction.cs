@@ -92,7 +92,7 @@ namespace Finance_Management.forms.Staff_Info
                 string sqlQuery;
                 if (CategoryList.Text.Equals("Salary"))
                 {
-                    sqlQuery = "INSERT INTO STAFF_TRANSACTION (employee_id, type, time, amount) VALUES ('" + EmployeeIDBox.Text.ToUpper() + "', '" + CategoryList.Text.ToUpper() + "', TIMESTAMP '" + time + "', (SELECT DISTINCT(amount) FROM STAFF_TRANSACTION WHERE employee_id='" + EmployeeIDBox.Text.ToUpper() + "' AND type='Salary'))";
+                    sqlQuery = "INSERT INTO STAFF_TRANSACTION (employee_id, type, time, amount) VALUES ('" + EmployeeIDBox.Text.ToUpper() + "', '" + CategoryList.Text.ToUpper() + "', TIMESTAMP '" + time + "', (SELECT DISTINCT(amount) FROM STAFF_TRANSACTION WHERE employee_id='" + EmployeeIDBox.Text.ToUpper() + "' AND type='SALARY'))";
                 }
                 else
                 {

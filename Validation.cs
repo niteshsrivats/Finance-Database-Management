@@ -108,9 +108,9 @@ namespace Finance_Management
 
         public bool EmployeeID(string id)
         {
-            if (id.Length == 10)
+            if (id.Length == 7)
             {
-                Regex idExp = new Regex("^1BM\\d{2}[A-Z]{2}\\d{2}S$");
+                Regex idExp = new Regex("^\\d{4}[CEHNST]{3}$");
                 if (idExp.Match(id).Success)
                 {
                     return true;
