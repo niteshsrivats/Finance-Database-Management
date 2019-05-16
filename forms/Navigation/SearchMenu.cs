@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Finance_Management.forms.Search;
+using System;
 using System.Windows.Forms;
 
 namespace Finance_Management.forms.Navigation
@@ -6,20 +7,20 @@ namespace Finance_Management.forms.Navigation
     public partial class SearchMenu : Form
     {
         private Home home;
-        private StaffTransactionSearchMenu staffTransactionSearchMenu;
+        private SearchStaffTransaction searchStaffTransaction;
         private StudentTransactionSearchMenu studentTransactionSearchMenu;
 
         public SearchMenu(Home home)
         {
             InitializeComponent();
             this.home = home;
-            staffTransactionSearchMenu = new StaffTransactionSearchMenu(this);
+            searchStaffTransaction = new SearchStaffTransaction(this);
             studentTransactionSearchMenu = new StudentTransactionSearchMenu(this);
         }
 
         private void Staff_Click(object sender, EventArgs e)
         {
-            staffTransactionSearchMenu.Show();
+            searchStaffTransaction.Show();
             Hide();
         }
 
