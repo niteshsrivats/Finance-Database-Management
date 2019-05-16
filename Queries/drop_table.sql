@@ -1,0 +1,12 @@
+DROP TRIGGER student_transaction_trigger;
+DROP TRIGGER staff_transaction_trigger;
+DROP TRIGGER scholar_transaction_trigger;
+DROP SEQUENCE transaction_id_sequence;
+DROP SEQUENCE hostel_id_sequence;
+DROP TABLE scholarship_transaction;
+DROP TABLE staff_transaction;
+DROP TABLE scholarship_type;
+DROP TABLE student_transaction;
+DROP TABLE hostel_staff;
+DROP TABLE student_info;
+DROP TABLE staff_info;

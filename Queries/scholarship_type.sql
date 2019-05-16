@@ -1,0 +1,10 @@
+INSERT INTO scholarship_type(scholarship_id, scholarship_name) VALUES('BAL_VID', 'BAL VIDHYA SCHOLARSHIP');
+INSERT INTO scholarship_type(scholarship_id, scholarship_name) VALUES('EXC_STU', 'EXCEL STUDENT SCHOLARSHIP');
+INSERT INTO scholarship_type(scholarship_id, scholarship_name) VALUES('GIRL_CHLD', 'GIRL CHILD SCHOLARSHIP');
+INSERT INTO scholarship_type(scholarship_id, scholarship_name) VALUES('KCET_DEF', 'KCET SCHOLARSHIP FOR DEFENCE WARDS');
+INSERT INTO scholarship_type(scholarship_id, scholarship_name) VALUES('KRI_VID', 'KRISHI VIDHYA SCHOLARSHIP');
+INSERT INTO scholarship_type(scholarship_id, scholarship_name) VALUES('MAR_ENG', 'MARITIME SCHOLARSHIP FOR ENGINEERS');
+INSERT INTO scholarship_type(scholarship_id, scholarship_name) VALUES('NAT_COLL', 'NATIONAL COLLEGE SCHOLARSHIP');
+INSERT INTO scholarship_type(scholarship_id, scholarship_name) VALUES('NCC_UG', 'NCC SCHOLARSHIP FOR UNDERGRADUATES');
+INSERT INTO scholarship_type(scholarship_id, scholarship_name) VALUES('SC_ST', 'SC/ST UNDERGRADUATES SCHOLARSHIP');
+INSERT INTO scholarship_type(scholarship_id, scholarship_name) VALUES('SRI_VIS', 'SRI VISVESWARAYA SCHOLARSHIP');
