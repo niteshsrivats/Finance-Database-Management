@@ -11,21 +11,21 @@ namespace Finance_Management.forms
 
         private SQL_Operator sql_operator = new SQL_Operator();
         private Validation validation = new Validation();
-        private SearchMenu searchMenu;
+        private StudentTransactionSearchMenu studentTransactionSearchMenu;
         private TimeListAdder timeListAdder = new TimeListAdder();
         private DateTime today = DateTime.Now;
         private Regex usnExp = new Regex("^[A-Z1-9]+$");
         private Regex typeExp = new Regex("^[A-Z:]+$");
 
-        public SearchStudentTransaction(SearchMenu searchMenu)
+        public SearchStudentTransaction(StudentTransactionSearchMenu studentTransactionSearchMenu)
         {
             InitializeComponent();
-            this.searchMenu = searchMenu;
+            this.studentTransactionSearchMenu = studentTransactionSearchMenu;
         }
 
         private void SearchStudentTransaction_Load(object sender, EventArgs e)
         {
-            for (int year = 1946; year <= today.Year; year++)
+            for (int year = today.Year; year >= 2015; year--)
             {
                 YearList.Items.Add(year);
                 YearToList.Items.Add(year);
@@ -84,11 +84,11 @@ namespace Finance_Management.forms
             {
                 if (criteria)
                 {
-                    sqlQuery += " AND amount > " + AmountBox.Text + "";
+                    sqlQuery += " AND ABS(amount) > " + AmountBox.Text + "";
                 }
                 else
                 {
-                    sqlQuery += " WHERE amount > " + AmountBox.Text + "";
+                    sqlQuery += " WHERE ABS(amount) > " + AmountBox.Text + "";
                     criteria = true;
                 }
             }
@@ -96,11 +96,11 @@ namespace Finance_Management.forms
             {
                 if (criteria)
                 {
-                    sqlQuery += " AND amount < " + AmountToBox.Text + "";
+                    sqlQuery += " AND ABS(amount) < " + AmountToBox.Text + "";
                 }
                 else
                 {
-                    sqlQuery += " WHERE amount < " + AmountToBox.Text + "";
+                    sqlQuery += " WHERE ABS(amount) < " + AmountToBox.Text + "";
                     criteria = true;
                 }
             }
@@ -109,11 +109,11 @@ namespace Finance_Management.forms
             {
                 if (criteria)
                 {
-                    sqlQuery += " AND time > timestamp '" + startTimestamp + "'";
+                    sqlQuery += " AND TO_CHAR(time, 'YYYY-MM-DD HH24:MI') > timestamp '" + startTimestamp + "'";
                 }
                 else
                 {
-                    sqlQuery += " WHERE time > timestamp '" + startTimestamp + "'";
+                    sqlQuery += " WHERE TO_CHAR(time, 'YYYY-MM-DD HH24:MI') > timestamp '" + startTimestamp + "'";
                     criteria = true;
                 }
             }
@@ -121,14 +121,15 @@ namespace Finance_Management.forms
             {
                 if (criteria)
                 {
-                    sqlQuery += " AND time < timestamp '" + endTimestamp + "'";
+                    sqlQuery += " AND TO_CHAR(time, 'YYYY-MM-DD HH24:MI') < '" + endTimestamp + "'";
                 }
                 else
                 {
-                    sqlQuery += " WHERE time < timestamp '" + endTimestamp + "'";
+                    sqlQuery += " WHERE TO_CHAR(time, 'YYYY-MM-DD HH24:MI') < '" + endTimestamp + "'";
                     criteria = true;
                 }
             }
+            sqlQuery += " ORDER BY time DESC";
             return sqlQuery;
         }
 
@@ -139,16 +140,18 @@ namespace Finance_Management.forms
             TypeBox.Clear();
             AmountBox.Clear();
             AmountToBox.Clear();
-            YearList.Items.Clear();
-            YearToList.Items.Clear();
-            MonthList.Items.Clear();
-            MonthToList.Items.Clear();
-            DayList.Items.Clear();
-            DayToList.Items.Clear();
-            HourList.Items.Clear();
-            HourToList.Items.Clear();
-            MinuteList.Items.Clear();
-            MinuteToList.Items.Clear();
+            YearList.SelectedItems.Clear();
+            YearToList.SelectedItems.Clear();
+            MonthList.Visible = false;
+            MonthToList.Visible = false;
+            DayList.Visible = false;
+            DayToList.Visible = false;
+            HourList.Visible = false;
+            HourToList.Visible = false;
+            MinuteList.Visible = false;
+            MinuteToList.Visible = false;
+            AMPMList.Visible = false;
+            AMPMToList.Visible = false;
             DataView.DataSource = null;
         }
 
@@ -183,34 +186,85 @@ namespace Finance_Management.forms
             AmountToBox.Select();
         }
 
+        private void NameBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                string sqlQuery = Get_Search_Query();
+                sql_operator.Display(sqlQuery, DataView);
+            }
+        }
+
+        private void USNBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                string sqlQuery = Get_Search_Query();
+                sql_operator.Display(sqlQuery, DataView);
+            }
+        }
+
+        private void TypeBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                string sqlQuery = Get_Search_Query();
+                sql_operator.Display(sqlQuery, DataView);
+            }
+        }
+
+        private void AmountBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                string sqlQuery = Get_Search_Query();
+                sql_operator.Display(sqlQuery, DataView);
+            }
+        }
+
+        private void AmountToBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                string sqlQuery = Get_Search_Query();
+                sql_operator.Display(sqlQuery, DataView);
+            }
+        }
+
         private void YearList_SelectedIndexChanged(object sender, EventArgs e)
         {
             MonthList.Visible = false;
             MonthList.Items.Clear();
-            if (int.Parse(YearList.Text) == today.Year)
+            if (YearList.Text != "")
             {
-                timeListAdder.Fill_Month(MonthList, today.Month);
+                if (int.Parse(YearList.Text) == today.Year)
+                {
+                    timeListAdder.Fill_Month(MonthList, today.Month);
+                }
+                else
+                {
+                    timeListAdder.Fill_Month(MonthList, 12);
+                }
+                MonthList.Visible = true;
             }
-            else
-            {
-                timeListAdder.Fill_Month(MonthList, 12);
-            }
-            MonthList.Visible = true;
         }
 
         private void YearToList_SelectedIndexChanged(object sender, EventArgs e)
         {
             MonthToList.Visible = false;
             MonthToList.Items.Clear();
-            if (int.Parse(YearToList.Text) == today.Year)
+            if (YearToList.Text != "")
             {
-                timeListAdder.Fill_Month(MonthToList, today.Month);
+                if (int.Parse(YearToList.Text) == today.Year)
+                {
+                    timeListAdder.Fill_Month(MonthToList, today.Month);
+                }
+                else
+                {
+                    timeListAdder.Fill_Month(MonthToList, 12);
+                }
+                MonthToList.Visible = true;
             }
-            else
-            {
-                timeListAdder.Fill_Month(MonthToList, 12);
-            }
-            MonthToList.Visible = true;
         }
 
         private void MonthList_SelectedIndexChanged(object sender, EventArgs e)
@@ -322,7 +376,7 @@ namespace Finance_Management.forms
 
         private void Back_Click(object sender, EventArgs e)
         {
-            searchMenu.Show();
+            studentTransactionSearchMenu.Show();
             Hide();
             Clear_All_Entries();
         }
@@ -330,7 +384,7 @@ namespace Finance_Management.forms
         private void SearchStudentTransaction_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
-            searchMenu.Show();
+            studentTransactionSearchMenu.Show();
             Hide();
             Clear_All_Entries();
         }

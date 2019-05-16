@@ -55,17 +55,18 @@
             this.HourToList = new System.Windows.Forms.ListBox();
             this.MinuteToList = new System.Windows.Forms.ListBox();
             this.AMPMToList = new System.Windows.Forms.ListBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.DataView)).BeginInit();
             this.SuspendLayout();
             // 
             // EmployeeIDBox
             // 
             this.EmployeeIDBox.Location = new System.Drawing.Point(220, 150);
-            this.EmployeeIDBox.MaxLength = 6;
+            this.EmployeeIDBox.MaxLength = 7;
             this.EmployeeIDBox.Name = "EmployeeIDBox";
             this.EmployeeIDBox.Size = new System.Drawing.Size(100, 22);
             this.EmployeeIDBox.TabIndex = 1;
-            this.EmployeeIDBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EmployeeIDBox_KeyDown);
+            this.EmployeeIDBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EmployeeIDBox_KeyPress);
             // 
             // TypeBox
             // 
@@ -74,7 +75,7 @@
             this.TypeBox.Name = "TypeBox";
             this.TypeBox.Size = new System.Drawing.Size(100, 22);
             this.TypeBox.TabIndex = 2;
-            this.TypeBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TypeBox_KeyDown);
+            this.TypeBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TypeBox_KeyPress);
             // 
             // AmountBox
             // 
@@ -83,7 +84,7 @@
             this.AmountBox.Name = "AmountBox";
             this.AmountBox.Size = new System.Drawing.Size(100, 22);
             this.AmountBox.TabIndex = 15;
-            this.AmountBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AmountBox_KeyDown);
+            this.AmountBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AmountBox_KeyPress);
             // 
             // AmountToBox
             // 
@@ -92,7 +93,7 @@
             this.AmountToBox.Name = "AmountToBox";
             this.AmountToBox.Size = new System.Drawing.Size(100, 22);
             this.AmountToBox.TabIndex = 16;
-            this.AmountToBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AmountToBox_KeyDown);
+            this.AmountToBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AmountToBox_KeyPress);
             // 
             // LabelEmployeeID
             // 
@@ -204,7 +205,7 @@
             this.NameBox.Name = "NameBox";
             this.NameBox.Size = new System.Drawing.Size(100, 22);
             this.NameBox.TabIndex = 0;
-            this.NameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NameBox_KeyDown);
+            this.NameBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NameBox_KeyPress);
             // 
             // YearList
             // 
@@ -435,5 +436,6 @@
         private System.Windows.Forms.ListBox HourToList;
         private System.Windows.Forms.ListBox MinuteToList;
         private System.Windows.Forms.ListBox AMPMToList;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
