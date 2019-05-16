@@ -220,7 +220,7 @@
             this.Controls.Add(this.LabelEmployeeID);
             this.Name = "NewStaffTransaction";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Staff Transaction";
+            this.Text = "New Staff Transaction";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StaffTransaction_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.DataView)).EndInit();
             this.ResumeLayout(false);

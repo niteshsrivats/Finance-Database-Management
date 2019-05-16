@@ -4,11 +4,11 @@ using System.Windows.Forms;
 
 namespace Finance_Management
 {
-    public partial class StudentInfo : Form
+    public partial class NewStudentEntry : Form
     {
         private NewEntryMenu newEntryMenu;
 
-        public StudentInfo(NewEntryMenu newEntryMenu)
+        public NewStudentEntry(NewEntryMenu newEntryMenu)
         {
             InitializeComponent();
             this.newEntryMenu = newEntryMenu;

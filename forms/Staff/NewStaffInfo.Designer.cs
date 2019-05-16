@@ -1,6 +1,6 @@
 ﻿namespace Finance_Management
 {
-    partial class StaffInfo
+    partial class NewStaffEntry
     {
         /// <summary>
         /// Required designer variable.
@@ -150,7 +150,7 @@
             this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
-            // StaffInfo
+            // NewStaffEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -166,7 +166,7 @@
             this.Controls.Add(this.LabelEmployeeID);
             this.Controls.Add(this.NameBox);
             this.Controls.Add(this.EmployeeIDBox);
-            this.Name = "StaffInfo";
+            this.Name = "NewStaffEntry";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Staff Entry";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StaffInfo_FormClosing);

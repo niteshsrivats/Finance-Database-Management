@@ -229,9 +229,10 @@ namespace Finance_Management.forms.Search
             }
         }
 
-        private void YearList_SelectedValueChanged(object sender, EventArgs e)
+        private void YearList_SelectedIndexChanged(object sender, EventArgs e)
         {
             MonthList.Visible = false;
+            MonthList.ClearSelected();
             MonthList.Items.Clear();
             if (YearList.Text != "")
             {
@@ -250,8 +251,9 @@ namespace Finance_Management.forms.Search
         private void YearToList_SelectedIndexChanged(object sender, EventArgs e)
         {
             MonthToList.Visible = false;
+            MonthToList.ClearSelected();
             MonthToList.Items.Clear();
-            if (YearList.Text != "")
+            if (YearToList.Text != "")
             {
                 if (int.Parse(YearToList.Text) == today.Year)
                 {
@@ -268,108 +270,134 @@ namespace Finance_Management.forms.Search
         private void MonthList_SelectedIndexChanged(object sender, EventArgs e)
         {
             DayList.Visible = false;
+            DayList.ClearSelected();
             DayList.Items.Clear();
-            if (int.Parse(YearList.Text) == today.Year && int.Parse(MonthList.Text) == 2)
+            if (MonthList.Text != "")
             {
-                timeListAdder.Fill_Day(DayList, today.Day);
+                if (int.Parse(YearList.Text) == today.Year && int.Parse(MonthList.Text) == 2)
+                {
+                    timeListAdder.Fill_Day(DayList, today.Day);
+                }
+                else
+                {
+                    timeListAdder.Fill_Day(DayList, validation.Maximum_Days_Month(int.Parse(MonthList.Text), int.Parse(YearList.Text)));
+                }
+                DayList.Visible = true;
             }
-            else
-            {
-                timeListAdder.Fill_Day(DayList, validation.Maximum_Days_Month(int.Parse(MonthList.Text), int.Parse(YearList.Text)));
-            }
-            DayList.Visible = true;
         }
 
         private void MonthToList_SelectedIndexChanged(object sender, EventArgs e)
         {
             DayToList.Visible = false;
+            DayToList.ClearSelected();
             DayToList.Items.Clear();
-            if (int.Parse(YearToList.Text) == today.Year && int.Parse(MonthToList.Text) == 2)
+            if (MonthToList.Text != "")
             {
-                timeListAdder.Fill_Day(DayToList, today.Day);
+                if (int.Parse(YearToList.Text) == today.Year && int.Parse(MonthToList.Text) == 2)
+                {
+                    timeListAdder.Fill_Day(DayToList, today.Day);
+                }
+                else
+                {
+                    timeListAdder.Fill_Day(DayToList, validation.Maximum_Days_Month(int.Parse(MonthToList.Text), int.Parse(YearToList.Text)));
+                }
+                DayToList.Visible = true;
             }
-            else
-            {
-                timeListAdder.Fill_Day(DayToList, validation.Maximum_Days_Month(int.Parse(MonthToList.Text), int.Parse(YearToList.Text)));
-            }
-            DayToList.Visible = true;
         }
 
         private void DayList_SelectedIndexChanged(object sender, EventArgs e)
         {
             HourList.Visible = false;
+            HourList.ClearSelected();
             HourList.Items.Clear();
-            if (int.Parse(YearList.Text) == today.Year && int.Parse(MonthList.Text) == today.Month && int.Parse(DayList.Text) == today.Day)
+            if (DayList.Text != "")
             {
-                timeListAdder.Fill_Hour(HourList, today.Hour % 12);
+                if (int.Parse(YearList.Text) == today.Year && int.Parse(MonthList.Text) == today.Month && int.Parse(DayList.Text) == today.Day)
+                {
+                    timeListAdder.Fill_Hour(HourList, today.Hour % 12);
+                }
+                else
+                {
+                    timeListAdder.Fill_Hour(HourList, 11);
+                }
+                HourList.Visible = true;
             }
-            else
-            {
-                timeListAdder.Fill_Hour(HourList, 11);
-            }
-            HourList.Visible = true;
         }
 
         private void DayToList_SelectedIndexChanged(object sender, EventArgs e)
         {
             HourToList.Visible = false;
+            HourToList.ClearSelected();
             HourToList.Items.Clear();
-            if (int.Parse(YearToList.Text) == today.Year && int.Parse(MonthToList.Text) == today.Month && int.Parse(DayToList.Text) == today.Day)
+            if (DayToList.Text != "")
             {
-                timeListAdder.Fill_Hour(HourToList, today.Hour % 12);
+                if (int.Parse(YearToList.Text) == today.Year && int.Parse(MonthToList.Text) == today.Month && int.Parse(DayToList.Text) == today.Day)
+                {
+                    timeListAdder.Fill_Hour(HourToList, today.Hour % 12);
+                }
+                else
+                {
+                    timeListAdder.Fill_Hour(HourToList, 11);
+                }
+                HourToList.Visible = true;
             }
-            else
-            {
-                timeListAdder.Fill_Hour(HourToList, 11);
-            }
-            HourToList.Visible = true;
         }
 
         private void HourList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (int.Parse(YearList.Text) == today.Year && int.Parse(MonthList.Text) == today.Month && int.Parse(DayList.Text) == today.Day && int.Parse(HourList.Text) == today.Hour)
+            MinuteList.Visible = false;
+            AMPMList.Visible = false;
+            MinuteList.ClearSelected();
+            AMPMList.ClearSelected();
+            if (HourList.Text != "")
             {
-                MinuteList.Visible = false;
-                MinuteList.Items.Clear();
-                timeListAdder.Fil_Minute(MinuteList, today.Minute);
-                MinuteList.Text = "00";
+                if (int.Parse(YearList.Text) == today.Year && int.Parse(MonthList.Text) == today.Month && int.Parse(DayList.Text) == today.Day && int.Parse(HourList.Text) == today.Hour)
+                {
+                    MinuteList.Items.Clear();
+                    timeListAdder.Fil_Minute(MinuteList, today.Minute);
+                    MinuteList.Text = "00";
+                }
+                else if (MinuteList.Text == "")
+                {
+                    timeListAdder.Fil_Minute(MinuteList, 59);
+                    MinuteList.Text = "00";
+                }
+                if (AMPMList.Text == "")
+                {
+                    AMPMList.Text = "AM";
+                }
+                MinuteList.Visible = true;
+                AMPMList.Visible = true;
             }
-            else if (MinuteList.Text == "")
-            {
-                timeListAdder.Fil_Minute(MinuteList, 59);
-                MinuteList.Text = "00";
-
-            }
-
-            if (AMPMList.Text == "")
-            {
-                AMPMList.Text = "AM";
-            }
-            MinuteList.Visible = true;
-            AMPMList.Visible = true;
         }
 
         private void HourToList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (int.Parse(YearToList.Text) == today.Year && int.Parse(MonthToList.Text) == today.Month && int.Parse(DayToList.Text) == today.Day && int.Parse(HourToList.Text) == today.Hour)
+            MinuteToList.Visible = false;
+            AMPMToList.Visible = false;
+            MinuteToList.ClearSelected();
+            AMPMToList.ClearSelected();
+            if (HourToList.Text != "")
             {
-                MinuteToList.Visible = false;
-                MinuteToList.Items.Clear();
-                timeListAdder.Fil_Minute(MinuteToList, today.Minute);
-                MinuteToList.Text = "00";
-            }
-            else if (MinuteToList.Text == "")
-            {
-                timeListAdder.Fil_Minute(MinuteToList, 59);
-                MinuteToList.Text = "00";
-            }
+                if (int.Parse(YearToList.Text) == today.Year && int.Parse(MonthToList.Text) == today.Month && int.Parse(DayToList.Text) == today.Day && int.Parse(HourToList.Text) == today.Hour)
+                {
+                    MinuteToList.Items.Clear();
+                    timeListAdder.Fil_Minute(MinuteToList, today.Minute);
+                    MinuteToList.Text = "00";
+                }
+                else if (MinuteToList.Text == "")
+                {
+                    timeListAdder.Fil_Minute(MinuteToList, 59);
+                    MinuteToList.Text = "00";
+                }
 
-            if (AMPMToList.Text == "")
-            {
-                AMPMToList.Text = "AM";
+                if (AMPMToList.Text == "")
+                {
+                    AMPMToList.Text = "AM";
+                }
+                MinuteToList.Visible = true;
+                AMPMToList.Visible = true;
             }
-            MinuteToList.Visible = true;
-            AMPMToList.Visible = true;
         }
 
         private void Back_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace Finance_Management.forms.Student_Info
 {
-    partial class StudentTransaction
+    partial class NewStudentTransaction
     {
         /// <summary>
         /// Required designer variable.
@@ -203,7 +203,7 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Payment mode";
             // 
-            // StudentTransaction
+            // NewStudentTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -224,9 +224,9 @@
             this.Controls.Add(this.CategoryList);
             this.Controls.Add(this.LabelUSN);
             this.Controls.Add(this.USNBox);
-            this.Name = "StudentTransaction";
+            this.Name = "NewStudentTransaction";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Student Transaction";
+            this.Text = "New Student Transaction";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentTransaction_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.DataView)).EndInit();
             this.ResumeLayout(false);

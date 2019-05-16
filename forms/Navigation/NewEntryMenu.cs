@@ -6,15 +6,15 @@ namespace Finance_Management.forms.Navigation
     public partial class NewEntryMenu : Form
     {
         private Home home;
-        private StudentInfo studentInfo;
-        private StaffInfo staffInfo;
+        private NewStudentEntry studentInfo;
+        private NewStaffEntry staffInfo;
 
         public NewEntryMenu(Home home)
         {
             InitializeComponent();
             this.home = home;
-            studentInfo = new StudentInfo(this);
-            staffInfo = new StaffInfo(this);
+            studentInfo = new NewStudentEntry(this);
+            staffInfo = new NewStaffEntry(this);
         }
 
         private void Student_Click(object sender, EventArgs e)

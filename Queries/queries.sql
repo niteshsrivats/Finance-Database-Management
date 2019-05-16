@@ -19,7 +19,7 @@ CREATE TABLE student_info(
     usn VARCHAR(10) PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     dob DATE NOT NULL,
-    graduation_year INT NOT NULL,
+    graduation_year NUMBER(4) NOT NULL,
     hostel_id INT DEFAULT NULL
 );
 

@@ -5,13 +5,13 @@ using System.Windows.Forms;
 
 namespace Finance_Management.forms.Student_Info
 {
-    public partial class StudentTransaction : Form
+    public partial class NewStudentTransaction : Form
     {
         private SQL_Operator sql_operator = new SQL_Operator();
         private Validation validation = new Validation();
         private NewStudentTransactionMenu studentTransactionMenu;
 
-        public StudentTransaction(NewStudentTransactionMenu studentTransactionMenu)
+        public NewStudentTransaction(NewStudentTransactionMenu studentTransactionMenu)
         {
             InitializeComponent();
             this.studentTransactionMenu = studentTransactionMenu;
@@ -29,6 +29,7 @@ namespace Finance_Management.forms.Student_Info
             {
                 sqlQuery += " WHERE NAME LIKE '%" + SearchBox.Text.ToUpper() + "%'";
             }
+            sqlQuery += " ORDER BY graduation_year DESC, name";
             return sqlQuery;
         }
 

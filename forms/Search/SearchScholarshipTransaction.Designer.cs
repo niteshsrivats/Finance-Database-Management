@@ -61,6 +61,7 @@
             // Back
             // 
             this.Back.BackColor = System.Drawing.SystemColors.Window;
+            this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Back.Location = new System.Drawing.Point(40, 30);
             this.Back.Name = "Back";
@@ -73,6 +74,7 @@
             // Search
             // 
             this.Search.BackColor = System.Drawing.SystemColors.Window;
+            this.Search.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Search.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Search.Location = new System.Drawing.Point(410, 400);
             this.Search.Name = "Search";
@@ -148,6 +150,7 @@
             // 
             // YearList
             // 
+            this.YearList.Cursor = System.Windows.Forms.Cursors.Cross;
             this.YearList.FormattingEnabled = true;
             this.YearList.ItemHeight = 16;
             this.YearList.Location = new System.Drawing.Point(45, 268);
@@ -158,6 +161,7 @@
             // 
             // MonthList
             // 
+            this.MonthList.Cursor = System.Windows.Forms.Cursors.Cross;
             this.MonthList.FormattingEnabled = true;
             this.MonthList.ItemHeight = 16;
             this.MonthList.Location = new System.Drawing.Point(130, 268);
@@ -169,6 +173,7 @@
             // 
             // DayList
             // 
+            this.DayList.Cursor = System.Windows.Forms.Cursors.Cross;
             this.DayList.FormattingEnabled = true;
             this.DayList.ItemHeight = 16;
             this.DayList.Location = new System.Drawing.Point(195, 268);
@@ -180,6 +185,7 @@
             // 
             // HourList
             // 
+            this.HourList.Cursor = System.Windows.Forms.Cursors.Cross;
             this.HourList.FormattingEnabled = true;
             this.HourList.ItemHeight = 16;
             this.HourList.Location = new System.Drawing.Point(260, 268);
@@ -191,6 +197,7 @@
             // 
             // MinuteList
             // 
+            this.MinuteList.Cursor = System.Windows.Forms.Cursors.Cross;
             this.MinuteList.FormattingEnabled = true;
             this.MinuteList.ItemHeight = 16;
             this.MinuteList.Location = new System.Drawing.Point(325, 268);
@@ -201,6 +208,7 @@
             // 
             // AMPMList
             // 
+            this.AMPMList.Cursor = System.Windows.Forms.Cursors.Cross;
             this.AMPMList.FormattingEnabled = true;
             this.AMPMList.ItemHeight = 16;
             this.AMPMList.Items.AddRange(new object[] {
@@ -232,6 +240,7 @@
             // 
             // YearToList
             // 
+            this.YearToList.Cursor = System.Windows.Forms.Cursors.Cross;
             this.YearToList.FormattingEnabled = true;
             this.YearToList.ItemHeight = 16;
             this.YearToList.Location = new System.Drawing.Point(44, 333);
@@ -242,6 +251,7 @@
             // 
             // MonthToList
             // 
+            this.MonthToList.Cursor = System.Windows.Forms.Cursors.Cross;
             this.MonthToList.FormattingEnabled = true;
             this.MonthToList.ItemHeight = 16;
             this.MonthToList.Location = new System.Drawing.Point(130, 333);
@@ -253,6 +263,7 @@
             // 
             // DayToList
             // 
+            this.DayToList.Cursor = System.Windows.Forms.Cursors.Cross;
             this.DayToList.FormattingEnabled = true;
             this.DayToList.ItemHeight = 16;
             this.DayToList.Location = new System.Drawing.Point(195, 333);
@@ -264,6 +275,7 @@
             // 
             // HourToList
             // 
+            this.HourToList.Cursor = System.Windows.Forms.Cursors.Cross;
             this.HourToList.FormattingEnabled = true;
             this.HourToList.ItemHeight = 16;
             this.HourToList.Location = new System.Drawing.Point(260, 333);
@@ -275,6 +287,7 @@
             // 
             // MinuteToList
             // 
+            this.MinuteToList.Cursor = System.Windows.Forms.Cursors.Cross;
             this.MinuteToList.FormattingEnabled = true;
             this.MinuteToList.ItemHeight = 16;
             this.MinuteToList.Location = new System.Drawing.Point(325, 333);
@@ -285,6 +298,7 @@
             // 
             // AMPMToList
             // 
+            this.AMPMToList.Cursor = System.Windows.Forms.Cursors.Cross;
             this.AMPMToList.FormattingEnabled = true;
             this.AMPMToList.ItemHeight = 16;
             this.AMPMToList.Items.AddRange(new object[] {
@@ -367,7 +381,7 @@
             this.Controls.Add(this.Back);
             this.Name = "SearchScholarshipTransaction";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SearchScholarship";
+            this.Text = "Search Scholarship Transaction";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SearchScholarshipTransaction_FormClosing);
             this.Load += new System.EventHandler(this.SearchScholarshipTransaction_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataView)).EndInit();

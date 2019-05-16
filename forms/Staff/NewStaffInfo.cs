@@ -4,13 +4,13 @@ using System.Windows.Forms;
 
 namespace Finance_Management
 {
-    public partial class StaffInfo : Form
+    public partial class NewStaffEntry : Form
     {
         private SQL_Operator sql_operator = new SQL_Operator();
         private Validation validation = new Validation();
         private NewEntryMenu newEntryMenu;
 
-        public StaffInfo(NewEntryMenu newEntryMenu)
+        public NewStaffEntry(NewEntryMenu newEntryMenu)
         {
             InitializeComponent();
             this.newEntryMenu = newEntryMenu;
@@ -72,7 +72,9 @@ namespace Finance_Management
             EmployeeIDBox.Clear();
             NameBox.Clear();
             TypeList.ClearSelected();
-            DesignationList.ClearSelected();
+            DesignationList.Items.Clear();
+            DesignationList.Visible = false;
+            LabelDesignation.Visible = false;
         }
 
         private void Submit_Click(object sender, EventArgs e)
@@ -98,6 +100,7 @@ namespace Finance_Management
         {
             newEntryMenu.Show();
             Hide();
+            Clear_All_Entries();
         }
 
         private void StaffInfo_FormClosing(object sender, FormClosingEventArgs e)
@@ -105,6 +108,7 @@ namespace Finance_Management
             e.Cancel = true;
             newEntryMenu.Show();
             Hide();
+            Clear_All_Entries();
         }
 
         private void LabelEmployeeID_Click(object sender, EventArgs e)

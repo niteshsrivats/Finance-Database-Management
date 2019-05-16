@@ -215,9 +215,8 @@
             this.YearList.Location = new System.Drawing.Point(45, 268);
             this.YearList.Name = "YearList";
             this.YearList.Size = new System.Drawing.Size(65, 36);
-            this.YearList.Sorted = true;
             this.YearList.TabIndex = 3;
-            this.YearList.SelectedValueChanged += new System.EventHandler(this.YearList_SelectedValueChanged);
+            this.YearList.SelectedIndexChanged += new System.EventHandler(this.YearList_SelectedIndexChanged);
             // 
             // MonthList
             // 
@@ -293,7 +292,6 @@
             this.YearToList.Location = new System.Drawing.Point(45, 333);
             this.YearToList.Name = "YearToList";
             this.YearToList.Size = new System.Drawing.Size(65, 36);
-            this.YearToList.Sorted = true;
             this.YearToList.TabIndex = 9;
             this.YearToList.SelectedIndexChanged += new System.EventHandler(this.YearToList_SelectedIndexChanged);
             // 

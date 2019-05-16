@@ -8,14 +8,14 @@ namespace Finance_Management.forms.Navigation
     public partial class NewStudentTransactionMenu : Form
     {
         private NewScholarshipTransaction scholarshipTransaction;
-        private StudentTransaction studentTransaction;
+        private NewStudentTransaction studentTransaction;
         private NewTransactionMenu newTransactionMenu;
 
         public NewStudentTransactionMenu(NewTransactionMenu newTransactionMenu)
         {
             InitializeComponent();
             scholarshipTransaction = new NewScholarshipTransaction(this);
-            studentTransaction = new StudentTransaction(this);
+            studentTransaction = new NewStudentTransaction(this);
             this.newTransactionMenu = newTransactionMenu;
         }
 

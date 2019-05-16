@@ -29,6 +29,7 @@ namespace Finance_Management.forms.Staff_Info
             {
                 sqlQuery += " WHERE NAME LIKE '%" + SearchBox.Text.ToUpper() + "%'";
             }
+            sqlQuery += " ORDER BY join_date DESC, type, designation, name";
             return sqlQuery;
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace Finance_Management
 {
-    partial class StudentInfo
+    partial class NewStudentEntry
     {
         /// <summary>
         /// Required designer variable.
@@ -160,7 +160,7 @@
             this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
-            // StudentInfo
+            // NewStudentEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -178,9 +178,9 @@
             this.Controls.Add(this.LabelDob);
             this.Controls.Add(this.LabelUsn);
             this.Controls.Add(this.LabelName);
-            this.Name = "StudentInfo";
+            this.Name = "NewStudentEntry";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "StudentInfo";
+            this.Text = "New Student Entry";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentInfo_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
